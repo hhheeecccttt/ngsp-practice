@@ -261,12 +261,12 @@ header .stats { font-size: 0.82rem; color: var(--text-secondary); }
 
 <div class="controls">
   <div class="filter-group">
-    <label>Source:</label>
+    <label data-i18n="sourceLabel">Source:</label>
     <div id="sourceFilters" class="checkbox-group"></div>
   </div>
 
   <div style="margin-top:10px;display:flex;flex-direction:column;gap:6px">
-    <label for="modeToggle" style="font-size:0.78rem;font-weight:600;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.06em">Mode:</label>
+    <label for="modeToggle" id="modeLabel" style="font-size:0.78rem;font-weight:600;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.06em">Mode:</label>
     <select id="modeToggle">
       <option value="all">All Questions</option>
       <option value="incorrect">Incorrect Only</option>
@@ -295,13 +295,13 @@ header .stats { font-size: 0.82rem; color: var(--text-secondary); }
 
 <div id="mainContent">
   <div class="empty">
-    <h2>Select a unit to begin</h2>
-    <p>Questions will appear here.</p>
+    <h2 data-i18n="selectUnit">Select a unit to begin</h2>
+    <p data-i18n="questionsWillAppear">Questions will appear here.</p>
   </div>
 </div>
 
 <div id="reviewSection" class="review-section" style="display:none">
-  <h3>Questions to Review (<span id="reviewCount">0</span>)</h3>
+    <h3>Questions to Review (<span id="reviewCount">0</span>)</h3>
   <div id="reviewList"></div>
 </div>
 
@@ -310,6 +310,179 @@ header .stats { font-size: 0.82rem; color: var(--text-secondary); }
 </div>
 
 <script>
+// ===== I18N =====
+const strings = {
+  en: {
+    sourceLabel: 'Source:',
+    modeLabel: 'Mode:',
+    allQuestions: 'All Questions',
+    incorrectOnly: 'Incorrect Only',
+    flaggedOnly: 'Flagged Only',
+    shuffle: 'Shuffle',
+    dashboard: 'Dashboard',
+    answerKey: 'Answer Key',
+    exportJSON: 'Export JSON',
+    resetProgress: 'Reset Progress',
+    all: 'All',
+    individualUnits: 'Individual Units',
+    allUnits: 'All Units',
+    comprehensiveReviews: 'Comprehensive Reviews',
+    allReviews: 'All Reviews',
+    sampleExams: 'Sample Exams',
+    review13: 'Review Week 1-3',
+    review46: 'Review Week 4-6',
+    review710: 'Review Week 7-10',
+    gliderExam: 'Glider Licence TP877E',
+    pstarTP11919: 'PSTAR TP11919',
+    selectAnswer: 'select answer',
+    submitNext: 'submit / next',
+    navigate: 'navigate',
+    flagUnflag: 'flag / unflag',
+    selectUnit: 'Select a unit to begin',
+    questionsWillAppear: 'Questions will appear here.',
+    loading: 'Loading...',
+    errorLoading: 'Error loading',
+    noIncorrect: 'No incorrect questions!',
+    noFlagged: 'No flagged questions!',
+    greatJob: "Great job! Try a different unit or switch to All Questions mode.",
+    flagFirst: 'Flag some questions first by clicking the flag icon.',
+    noQuestionsMatch: 'No questions match',
+    tryDifferent: 'Try a different filter.',
+    submitAnswer: 'Submit Answer',
+    gotItRight: 'Got it Right',
+    gotItWrong: 'Got it Wrong',
+    correct: 'Correct!',
+    incorrect: 'Incorrect. The correct answer was',
+    correctSelf: 'Correct! (self-marked)',
+    incorrectSelf: 'Incorrect (self-marked)',
+    noVerifiedAnswer: 'No verified answer',
+    sampleExam: 'Sample Exam \u2014 Glider Licence',
+    pstarLabel: 'PSTAR TP11919',
+    copy: 'Copy',
+    copyToClipboard: 'Copy to clipboard',
+    flag: 'Flag',
+    flagForReview: 'Flag for review',
+    previous: 'Previous',
+    next: 'Next',
+    done: 'Done',
+    copied: 'Copied!',
+    questionsToReview: 'Questions to Review',
+    yourAnswer: 'Your answer',
+    correctAnswer: 'Correct',
+    andMore: 'and',
+    close: 'Close',
+    answerKeyTitle: 'Answer Key',
+    allFilter: 'All',
+    correctFilter: 'Correct',
+    incorrectFilter: 'Incorrect',
+    unansweredFilter: 'Unanswered',
+    you: 'you',
+    answered: 'Answered',
+    unanswered: 'Unanswered',
+    correctStat: 'Correct',
+    incorrectStat: 'Incorrect',
+    correctShort: 'correct',
+    flaggedCount: 'flagged',
+    answeredCount: 'answered',
+    question: 'Question',
+    performanceDashboard: 'Performance Dashboard',
+    answerSome: 'Answer some questions first to see your stats.',
+    resetConfirm: 'Reset all progress? This will clear your answer history.',
+    correctAnswerLabel: 'Correct answer',
+    yourAnswerLabel: 'Your answer',
+    noVerifiedAnswerFile: '(no verified answer on file)',
+    poPrefix: 'PO',
+    reviewWeek13: 'Review Week 1-3',
+    reviewWeek46: 'Review Week 4-6',
+    reviewWeek710: 'Review Week 7-10',
+  },
+  fr: {
+    sourceLabel: 'Source\u00a0:',
+    modeLabel: 'Mode\u00a0:',
+    allQuestions: 'Toutes les questions',
+    incorrectOnly: 'Incorrectes seulement',
+    flaggedOnly: 'Signal\u00e9es seulement',
+    shuffle: 'M\u00e9langer',
+    dashboard: 'Tableau de bord',
+    answerKey: 'Corrig\u00e9',
+    exportJSON: 'Exporter JSON',
+    resetProgress: 'R\u00e9initialiser',
+    all: 'Tout',
+    individualUnits: 'Unit\u00e9s individuelles',
+    allUnits: 'Toutes les unit\u00e9s',
+    comprehensiveReviews: 'R\u00e9visions compl\u00e8tes',
+    allReviews: 'Toutes les r\u00e9visions',
+    sampleExams: 'Examens blancs',
+    review13: 'R\u00e9vision Semaine 1-3',
+    review46: 'R\u00e9vision Semaine 4-6',
+    review710: 'R\u00e9vision Semaine 7-10',
+    gliderExam: 'Licence de planeur TP877E',
+    pstarTP11919: 'PSTAR TP11919',
+    selectAnswer: 's\u00e9lectionner',
+    submitNext: 'soumettre / suivant',
+    navigate: 'naviguer',
+    flagUnflag: 'signaler / enlever',
+    selectUnit: 'S\u00e9lectionnez une unit\u00e9',
+    questionsWillAppear: 'Les questions appara\u00eetront ici.',
+    loading: 'Chargement...',
+    errorLoading: 'Erreur de chargement',
+    noIncorrect: 'Aucune question incorrecte\u00a0!',
+    noFlagged: 'Aucune question signal\u00e9e\u00a0!',
+    greatJob: 'Bon travail\u00a0! Essayez une autre unit\u00e9 ou passez en mode Toutes les questions.',
+    flagFirst: 'Signalez d\u2019abord des questions en cliquant sur l\u2019ic\u00f4ne de signalement.',
+    noQuestionsMatch: 'Aucune question ne correspond',
+    tryDifferent: 'Essayez un autre filtre.',
+    submitAnswer: 'Soumettre',
+    gotItRight: 'Bonne r\u00e9ponse',
+    gotItWrong: 'Mauvaise r\u00e9ponse',
+    correct: 'Bonne r\u00e9ponse\u00a0!',
+    incorrect: 'Incorrect. La bonne r\u00e9ponse \u00e9tait',
+    correctSelf: 'Bonne r\u00e9ponse\u00a0! (auto-\u00e9valuation)',
+    incorrectSelf: 'Incorrecte (auto-\u00e9valuation)',
+    noVerifiedAnswer: 'Aucune r\u00e9ponse v\u00e9rifi\u00e9e',
+    sampleExam: 'Examen blanc \u2014 Licence de planeur',
+    pstarLabel: 'PSTAR TP11919',
+    copy: 'Copier',
+    copyToClipboard: 'Copier dans le presse-papier',
+    flag: 'Signaler',
+    flagForReview: 'Signaler pour r\u00e9vision',
+    previous: 'Pr\u00e9c\u00e9dent',
+    next: 'Suivant',
+    done: 'Termin\u00e9',
+    copied: 'Copi\u00e9\u00a0!',
+    questionsToReview: 'Questions \u00e0 r\u00e9viser',
+    yourAnswer: 'Votre r\u00e9ponse',
+    correctAnswer: 'Bonne r\u00e9ponse',
+    andMore: 'et',
+    close: 'Fermer',
+    answerKeyTitle: 'Corrig\u00e9',
+    allFilter: 'Tout',
+    correctFilter: 'Correct',
+    incorrectFilter: 'Incorrect',
+    unansweredFilter: 'Sans r\u00e9ponse',
+    you: 'vous',
+    answered: 'R\u00e9pondues',
+    unanswered: 'Sans r\u00e9ponse',
+    correctStat: 'Correctes',
+    incorrectStat: 'Incorrectes',
+    correctShort: 'correctes',
+    flaggedCount: 'signal\u00e9es',
+    answeredCount: 'r\u00e9pondues',
+    question: 'Question',
+    performanceDashboard: 'Tableau de bord',
+    answerSome: 'R\u00e9pondez d\u2019abord \u00e0 des questions pour voir vos statistiques.',
+    resetConfirm: 'R\u00e9initialiser la progression\u00a0? Cela effacera votre historique.',
+    correctAnswerLabel: 'Bonne r\u00e9ponse',
+    yourAnswerLabel: 'Votre r\u00e9ponse',
+    noVerifiedAnswerFile: '(aucune r\u00e9ponse v\u00e9rifi\u00e9e)',
+    poPrefix: 'PO',
+    reviewWeek13: 'R\u00e9vision Semaine 1-3',
+    reviewWeek46: 'R\u00e9vision Semaine 4-6',
+    reviewWeek710: 'R\u00e9vision Semaine 7-10',
+  },
+};
+function __(key) { return strings[state.lang][key] || key; }
+
 // ===== DATA =====
 let allQuestions = [];
 let state = {
@@ -334,10 +507,35 @@ async function loadData() {
     const data = await resp.json();
     allQuestions = data.questions.map((q, i) => ({ ...q, uid: q.source + '-' + q.id + '-' + i }));
     document.getElementById('langToggle').textContent = state.lang === 'fr' ? 'EN' : 'FR';
+    updateUIStrings();
     init();
   } catch (e) {
-    document.getElementById('headerStats').textContent = 'Error loading ' + file;
+    document.getElementById('headerStats').textContent = __('errorLoading') + ' ' + file;
   }
+}
+
+function updateUIStrings() {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.dataset.i18n;
+    if (key && strings[state.lang][key]) el.textContent = strings[state.lang][key];
+  });
+  ['shuffleBtn','dashboardBtn','answerKeyBtn','exportBtn','resetBtn'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = __(id === 'shuffleBtn' ? 'shuffle' : id === 'dashboardBtn' ? 'dashboard' : id === 'answerKeyBtn' ? 'answerKey' : id === 'exportBtn' ? 'exportJSON' : 'resetProgress');
+  });
+  document.getElementById('modeLabel').textContent = __('modeLabel');
+  const modeOpts = document.querySelectorAll('#modeToggle option');
+  modeOpts[0].textContent = __('allQuestions');
+  modeOpts[1].textContent = __('incorrectOnly');
+  modeOpts[2].textContent = __('flaggedOnly');
+  const hints = document.querySelectorAll('.keyboard-hint span');
+  if (hints.length >= 4) {
+    hints[0].innerHTML = `<kbd>1</kbd><kbd>2</kbd><kbd>3</kbd><kbd>4</kbd> ${__('selectAnswer')}`;
+    hints[1].innerHTML = `<kbd>Enter</kbd> ${__('submitNext')}`;
+    hints[2].innerHTML = `<kbd>\u2190</kbd> <kbd>\u2192</kbd> ${__('navigate')}`;
+    hints[3].innerHTML = `<kbd>F</kbd> ${__('flagUnflag')}`;
+  }
+  document.getElementById('reviewSection').querySelector('h3').innerHTML = `${__('questionsToReview')} (<span id="reviewCount">0</span>)`;
 }
 
 function toggleLang() {
@@ -351,7 +549,8 @@ function toggleLang() {
   state.selectedAnswer = null;
   state.answeredThisSession = {};
   saveState();
-  document.getElementById('sourceFilters').innerHTML = '<div class="checkbox-group" style="padding:12px;text-align:center;color:var(--muted)">Loading...</div>';
+  updateUIStrings();
+  document.getElementById('sourceFilters').innerHTML = '<div class="checkbox-group" style="padding:12px;text-align:center;color:var(--muted)">' + __('loading') + '</div>';
   loadData();
 }
 
@@ -377,7 +576,7 @@ function init() {
   }
 
   const allCb = document.createElement('label');
-  allCb.innerHTML = `<input type="checkbox" value="all" id="cb-all"> All (${allQuestions.length})`;
+  allCb.innerHTML = `<input type="checkbox" value="all" id="cb-all"> ${__('all')} (${allQuestions.length})`;
   container.appendChild(allCb);
 
   const columns = document.createElement('div');
@@ -387,11 +586,11 @@ function init() {
   leftCol.className = 'checkbox-column';
   const leftHeader = document.createElement('div');
   leftHeader.className = 'checkbox-column-header';
-  leftHeader.textContent = 'Individual Units';
+  leftHeader.textContent = __('individualUnits');
   leftCol.appendChild(leftHeader);
 
   const allUnitsCb = document.createElement('label');
-  allUnitsCb.innerHTML = `<input type="checkbox" value="all-units" id="cb-all-units"> All Units`;
+  allUnitsCb.innerHTML = `<input type="checkbox" value="all-units" id="cb-all-units"> ${__('allUnits')}`;
   leftCol.appendChild(allUnitsCb);
 
   const pos = [...new Set(allQuestions.map(q => q.po))].sort().filter(p => p > 0);
@@ -401,7 +600,7 @@ function init() {
   pos.forEach(po => {
     const n = countQs(q => q.po == po && q.source && (q.source.startsWith(po + ' ') || q.source.startsWith(po + '.')));
     const cb = document.createElement('label');
-    cb.innerHTML = `<input type="checkbox" value="${po}" class="unit-cb"> PO${po} ${names[po] || ''} (${n})`;
+    cb.innerHTML = `<input type="checkbox" value="${po}" class="unit-cb"> ${__('poPrefix')}${po} ${names[po] || ''} (${n})`;
     leftCol.appendChild(cb);
   });
   columns.appendChild(leftCol);
@@ -410,22 +609,23 @@ function init() {
   rightCol.className = 'checkbox-column';
   const rightHeader = document.createElement('div');
   rightHeader.className = 'checkbox-column-header';
-  rightHeader.textContent = 'Comprehensive Reviews';
+  rightHeader.textContent = __('comprehensiveReviews');
   rightCol.appendChild(rightHeader);
 
   const allReviewsCb = document.createElement('label');
-  allReviewsCb.innerHTML = `<input type="checkbox" value="all-reviews" id="cb-all-reviews"> All Reviews`;
+  allReviewsCb.innerHTML = `<input type="checkbox" value="all-reviews" id="cb-all-reviews"> ${__('allReviews')}`;
   rightCol.appendChild(allReviewsCb);
 
   const reviews = [
-    { value: 'review-13', label: 'Review Week 1-3', filter: s => s && (s.includes('Week 1-3 Review') || s.includes('Semaine 1-3')) },
-    { value: 'review-46', label: 'Review Week 4-6', filter: s => s && (s.includes('Week 4-6 Review') || s.includes('Semaine 4-6')) },
-    { value: 'review-710', label: 'Review Week 7-10', filter: s => s && (s.includes('Week 7-10 review') || s.includes('Semaine 7-10')) },
+    { value: 'review-13', labelKey: 'review13', labelEn: 'Review Week 1-3', filter: s => s && (s.includes('Week 1-3 Review') || s.includes('Semaine 1-3')) },
+    { value: 'review-46', labelKey: 'review46', labelEn: 'Review Week 4-6', filter: s => s && (s.includes('Week 4-6 Review') || s.includes('Semaine 4-6')) },
+    { value: 'review-710', labelKey: 'review710', labelEn: 'Review Week 7-10', filter: s => s && (s.includes('Week 7-10 review') || s.includes('Semaine 7-10')) },
   ];
   reviews.forEach(r => {
     const n = countQs(q => r.filter(q.source));
     const cb = document.createElement('label');
-    cb.innerHTML = `<input type="checkbox" value="${r.value}" class="review-cb"> ${r.label} (${n})`;
+    const label = __(r.labelKey);
+    cb.innerHTML = `<input type="checkbox" value="${r.value}" class="review-cb"> ${label} (${n})`;
     rightCol.appendChild(cb);
   });
   columns.appendChild(rightCol);
@@ -434,17 +634,17 @@ function init() {
   examCol.className = 'checkbox-column';
   const examHeader = document.createElement('div');
   examHeader.className = 'checkbox-column-header';
-  examHeader.textContent = 'Sample Exams';
+  examHeader.textContent = __('sampleExams');
   examCol.appendChild(examHeader);
 
   const examN = countQs(q => q.source && q.source.includes('TP877_E'));
   const examCb = document.createElement('label');
-  examCb.innerHTML = `<input type="checkbox" value="exam-glider"> Glider Licence TP877E (${examN})`;
+  examCb.innerHTML = `<input type="checkbox" value="exam-glider"> ${__('gliderExam')} (${examN})`;
   examCol.appendChild(examCb);
 
   const tp11919N = countQs(q => q.source && q.source.includes('PSTAR TP11919'));
   const tp11919Cb = document.createElement('label');
-  tp11919Cb.innerHTML = `<input type="checkbox" value="pstar-tp11919"> PSTAR TP11919 (${tp11919N})`;
+  tp11919Cb.innerHTML = `<input type="checkbox" value="pstar-tp11919"> ${__('pstarTP11919')} (${tp11919N})`;
   examCol.appendChild(tp11919Cb);
   columns.appendChild(examCol);
 
@@ -531,16 +731,16 @@ function applyFilter() {
   let filtered = allQuestions;
 
   const reviewSources = {
-    'review-13': 'Week 1-3 Review',
-    'review-46': 'Week 4-6 Review',
-    'review-710': 'Week 7-10 review',
+    'review-13': ['Week 1-3 Review', 'Semaine 1-3'],
+    'review-46': ['Week 4-6 Review', 'Semaine 4-6'],
+    'review-710': ['Week 7-10 review', 'Semaine 7-10'],
   };
 
   if (state.sourceFilters.length > 0) {
     filtered = filtered.filter(q => {
       return state.sourceFilters.some(f => {
         if (f.startsWith('review-')) {
-          return q.source && q.source.includes(reviewSources[f]);
+          return q.source && reviewSources[f].some(s => q.source.includes(s));
         }
         if (f === 'exam-glider') {
           return q.source && q.source.includes('TP877_E');
@@ -578,12 +778,12 @@ function render() {
   const filtered = state.filtered;
 
   if (filtered.length === 0) {
-    const msgs = { incorrect: 'No incorrect questions!', flagged: 'No flagged questions!' };
-    const hints = { incorrect: 'Great job! Try a different unit or switch to All Questions mode.', flagged: 'Flag some questions first by clicking the flag icon.' };
+    const msgs = { incorrect: __('noIncorrect'), flagged: __('noFlagged') };
+    const hints = { incorrect: __('greatJob'), flagged: __('flagFirst') };
     container.innerHTML = `
       <div class="empty">
-        <h2>${msgs[state.mode] || 'No questions match'}</h2>
-        <p>${hints[state.mode] || 'Try a different filter.'}</p>
+        <h2>${msgs[state.mode] || __('noQuestionsMatch')}</h2>
+        <p>${hints[state.mode] || __('tryDifferent')}</p>
       </div>`;
     document.getElementById('reviewSection').style.display = 'none';
     return;
@@ -630,32 +830,35 @@ function render() {
   if (!userAnswer) {
     if (q.correct) {
       submitHtml = `<div class="submit-area">
-        <div class="action-btns"><button class="submit-btn" onclick="submitAnswer()" ${selected ? '' : 'disabled'}>Submit Answer</button></div>
+        <div class="action-btns"><button class="submit-btn" onclick="submitAnswer()" ${selected ? '' : 'disabled'}>${__('submitAnswer')}</button></div>
       </div>`;
     } else {
       submitHtml = `<div class="submit-area">
-        <div class="action-btns"><button class="self-btn correct-btn" onclick="selfMark(true)">Got it Right</button><button class="self-btn incorrect-btn" onclick="selfMark(false)">Got it Wrong</button></div>
+        <div class="action-btns"><button class="self-btn correct-btn" onclick="selfMark(true)">${__('gotItRight')}</button><button class="self-btn incorrect-btn" onclick="selfMark(false)">${__('gotItWrong')}</button></div>
       </div>`;
     }
   } else {
     if (q.correct) {
       const fbClass = isCorrect ? 'correct' : 'incorrect';
-      const fbText = isCorrect ? 'Correct!' : `Incorrect. The correct answer was ${q.correct.toUpperCase()}.`;
+      const fbText = isCorrect ? __('correct') : `${__('incorrect')} ${q.correct.toUpperCase()}.`;
       feedbackHtml = `<div class="feedback ${fbClass}">${fbText}</div>`;
     } else {
       const fbClass = isCorrect ? 'correct' : 'incorrect';
-      const fbText = isCorrect ? 'Correct! (self-marked)' : 'Incorrect (self-marked)';
-      feedbackHtml = `<div class="feedback ${fbClass}">${fbText} <span style="font-weight:400;font-size:0.8rem">(no verified answer on file)</span></div>`;
+      const fbText = isCorrect ? __('correctSelf') : __('incorrectSelf');
+      feedbackHtml = `<div class="feedback ${fbClass}">${fbText} <span style="font-weight:400;font-size:0.8rem">${__('noVerifiedAnswerFile')}</span></div>`;
     }
   }
 
-  const topicDisplay = (q.topic || '').replace(/^Comprehensive\s*-\s*/, '').replace(/^[\d.]+\s*-\s*/, '');
-  const noAnswerBadge = !q.correct ? '<span style="font-size:0.7rem;background:#3d2e00;color:#ffb300;padding:2px 8px;margin-left:8px">No verified answer</span>' : '';
+  const topicDisplay = (q.topic || '').replace(/^Comprehensive\s*[-–]\s*/, '').replace(/^[\d.]+\s*[-–]\s*/, '');
+  const noAnswerBadge = !q.correct ? '<span style="font-size:0.7rem;background:#3d2e00;color:#ffb300;padding:2px 8px;margin-left:8px">' + __('noVerifiedAnswer') + '</span>' : '';
 
   let sourceLabel = q.source || '';
-  if (sourceLabel.includes('TP877_E')) sourceLabel = 'Sample Exam \u2014 Glider Licence';
-  else if (sourceLabel.includes('PSTAR TP11919')) sourceLabel = 'PSTAR TP11919';
-  else if (sourceLabel.includes('Week')) sourceLabel = sourceLabel.replace(/^[\d. ]+/, '');
+  if (sourceLabel.includes('TP877_E')) sourceLabel = __('sampleExam');
+  else if (sourceLabel.includes('PSTAR TP11919')) sourceLabel = __('pstarLabel');
+  else if (sourceLabel.includes('Week 1-3') || sourceLabel.includes('Semaine 1-3')) sourceLabel = __('reviewWeek13');
+  else if (sourceLabel.includes('Week 4-6') || sourceLabel.includes('Semaine 4-6')) sourceLabel = __('reviewWeek46');
+  else if (sourceLabel.includes('Week 7') || sourceLabel.includes('Semaine 7')) sourceLabel = __('reviewWeek710');
+  else if (sourceLabel.includes('Week') || sourceLabel.includes('Semaine')) sourceLabel = sourceLabel.replace(/^[\d. ]+/, '');
   else sourceLabel = sourceLabel.replace(/^[\d.]+/, '').trim();
   const sourceStr = q.source && (q.source.includes('PSTAR') || q.source.includes('TP877_E') || q.source.includes('Week')) ? `<span style="font-weight:600;color:var(--primary)">${sourceLabel}</span>` : '';
 
@@ -665,9 +868,9 @@ function render() {
         ${sourceStr}
         <span>${nameStr}</span>
         <span>${topicDisplay}${noAnswerBadge}</span>
-        <span>Question ${progress}</span>
-        <button class="copy-meta-btn" onclick="copyQuestion()" title="Copy to clipboard">Copy</button>
-        <button class="flag-btn ${isFlagged ? 'on' : ''}" onclick="toggleFlag()" title="Flag for review"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V3"/><path d="M4 3h12l-1 5l1 5H4"/></svg> Flag</button>
+        <span>${__('question')} ${progress}</span>
+        <button class="copy-meta-btn" onclick="copyQuestion()" title="${__('copyToClipboard')}">${__('copy')}</button>
+        <button class="flag-btn ${isFlagged ? 'on' : ''}" onclick="toggleFlag()" title="${__('flagForReview')}"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V3"/><path d="M4 3h12l-1 5l1 5H4"/></svg> ${__('flag')}</button>
       </div>
       <div class="question-text">${q.question}</div>
       ${q.image ? `<div class="question-image"><img src="images/${q.image}" alt="Reference chart" loading="lazy" onload="this.classList.add('loaded')" onerror="this.style.display='none'"></div>` : ''}
@@ -676,8 +879,8 @@ function render() {
       ${feedbackHtml}
     </div>
     <div class="nav-buttons">
-      <button class="prev" onclick="prevQuestion()" ${state.currentIndex === 0 ? 'disabled' : ''}>Previous</button>
-      <button class="next" onclick="nextQuestion()">${state.currentIndex < filtered.length - 1 ? 'Next' : 'Done'}</button>
+      <button class="prev" onclick="prevQuestion()" ${state.currentIndex === 0 ? 'disabled' : ''}>${__('previous')}</button>
+      <button class="next" onclick="nextQuestion()">${state.currentIndex < filtered.length - 1 ? __('next') : __('done')}</button>
     </div>
     <div class="progress">${progress}</div>
   `;
@@ -752,14 +955,14 @@ function copyQuestion() {
     if (q.options[l]) text += l.toUpperCase() + ') ' + q.options[l] + '\n';
   });
   const correct = q.correct ? q.correct.toUpperCase() : 'N/A';
-  text += '\nCorrect answer: ' + correct;
+  text += __('correctAnswerLabel') + ': ' + correct;
   const result = state.results[q.uid];
-  if (result) text += '\nYour answer: ' + (result.answered || '?').toUpperCase() + (result.correct ? ' ✓' : ' ✗');
+  if (result) text += '\n' + __('yourAnswerLabel') + ': ' + (result.answered || '?').toUpperCase() + (result.correct ? ' ✓' : ' ✗');
   navigator.clipboard.writeText(text).catch(() => {});
   const btn = document.querySelector('.question-card .copy-meta-btn');
   if (btn) {
     const orig = btn.textContent;
-    btn.textContent = 'Copied!';
+    btn.textContent = __('copied');
     setTimeout(() => btn.textContent = orig, 800);
   }
 }
@@ -783,8 +986,8 @@ function updateHeaderStats() {
   const answered = Object.keys(state.results).length;
   const correct = Object.values(state.results).filter(r => r.correct).length;
   const flagged = Object.keys(state.flagged).length;
-  let parts = `${answered}/${total} answered, ${correct} correct (${total > 0 ? Math.round(correct/total*100) : 0}%)`;
-  if (flagged > 0) parts += `, ${flagged} flagged`;
+  let parts = `${answered}/${total} ${__('answeredCount')}, ${correct} ${__('correctShort')} (${total > 0 ? Math.round(correct/total*100) : 0}%)`;
+  if (flagged > 0) parts += `, ${flagged} ${__('flaggedCount')}`;
   document.getElementById('headerStats').textContent = parts;
 }
 
@@ -831,12 +1034,12 @@ function updateReviewSection() {
     return '<div class="review-question">' +
       '<div class="q-text">' + q.question + '</div>' +
       '<div class="q-answer">' + choices + '</div>' +
-      '<div class="q-topic">' + (q.po ? 'PO ' + q.po + ' - ' : '') + 'Your answer: ' + userAns.toUpperCase() + ', Correct: ' + (q.correct ? q.correct.toUpperCase() : 'N/A') + '</div>' +
+      '<div class="q-topic">' + (q.po ? __('poPrefix') + ' ' + q.po + ' - ' : '') + __('yourAnswer') + ': ' + userAns.toUpperCase() + ', ' + __('correctAnswer') + ': ' + (q.correct ? q.correct.toUpperCase() : 'N/A') + '</div>' +
     '</div>';
   }).join('');
 
   if (incorrect.length > 20) {
-    reviewList.innerHTML += '<div class="review-question" style="color:var(--muted)">...and ' + (incorrect.length - 20) + ' more</div>';
+    reviewList.innerHTML += '<div class="review-question" style="color:var(--muted)">' + __('andMore') + ' ' + (incorrect.length - 20) + ' more</div>';
   }
 }
 
@@ -866,12 +1069,12 @@ function showAnswerKey() {
   const groups = {};
   qs.forEach(q => {
     let key;
-    if (q.source && q.source.includes('TP877_E')) key = 'Sample Exam \u2014 Glider Licence';
-    else if (q.source && q.source.includes('PSTAR TP11919')) key = 'PSTAR TP11919 Questions';
-    else if (q.source && q.source.includes('Week 1-3 Review')) key = 'Review Week 1-3';
-    else if (q.source && q.source.includes('Week 4-6 Review')) key = 'Review Week 4-6';
-    else if (q.source && q.source.includes('Week 7-10 review')) key = 'Review Week 7-10';
-    else key = 'PO ' + q.po + ' \u2014 ' + (names[q.po] || '');
+    if (q.source && q.source.includes('TP877_E')) key = __('sampleExam');
+    else if (q.source && q.source.includes('PSTAR TP11919')) key = __('pstarLabel') + ' Questions';
+    else if (q.source && q.source.includes('Week 1-3 Review')) key = __('reviewWeek13');
+    else if (q.source && q.source.includes('Week 4-6 Review')) key = __('reviewWeek46');
+    else if (q.source && q.source.includes('Week 7-10 review')) key = __('reviewWeek710');
+    else key = __('poPrefix') + ' ' + q.po + ' \u2014 ' + (names[q.po] || '');
     if (!groups[key]) groups[key] = [];
     groups[key].push(q);
   });
@@ -923,7 +1126,7 @@ function showAnswerKey() {
         const userAns = r ? r.answered : null;
         const correctAns = q.correct || '?';
         const flagIcon = state.flagged[q.uid] ? '<span class="ak-flag-icon">\u2605</span>' : '';
-        const userBadge = userAns ? '<span class="badge ' + status + ' user-badge">you: ' + userAns.toUpperCase() + '</span>' : '';
+        const userBadge = userAns ? '<span class="badge ' + status + ' user-badge">' + __('you') + ': ' + userAns.toUpperCase() + '</span>' : '';
         html += '<div class="ak-row">' +
           '<span class="num">' + (idx + 1) + '</span>' +
           flagIcon +
@@ -938,14 +1141,15 @@ function showAnswerKey() {
     content.innerHTML = html;
   }
 
+  const akQS = qs.length;
   overlay.innerHTML = '<div class="answer-key-content" onclick="event.stopPropagation()">' +
-    '<button class="close-btn" onclick="this.closest(\'.answer-key-overlay\').remove()">Close</button>' +
-    '<h2>Answer Key (' + qs.length + ' questions)</h2>' +
+    '<button class="close-btn" onclick="this.closest(\'.answer-key-overlay\').remove()">' + __('close') + '</button>' +
+    '<h2>' + __('answerKeyTitle') + ' (' + akQS + ' questions)</h2>' +
     '<div class="ak-filters">' +
-      '<button class="active" onclick="(function(){activeFilter=\'all\';document.querySelectorAll(\'.ak-filters button\').forEach(b=>b.classList.remove(\'active\'));this.classList.add(\'active\');renderAK()})(this)">All</button>' +
-      '<button onclick="(function(){activeFilter=\'correct\';document.querySelectorAll(\'.ak-filters button\').forEach(b=>b.classList.remove(\'active\'));this.classList.add(\'active\');renderAK()})(this)">Correct</button>' +
-      '<button onclick="(function(){activeFilter=\'incorrect\';document.querySelectorAll(\'.ak-filters button\').forEach(b=>b.classList.remove(\'active\'));this.classList.add(\'active\');renderAK()})(this)">Incorrect</button>' +
-      '<button onclick="(function(){activeFilter=\'unanswered\';document.querySelectorAll(\'.ak-filters button\').forEach(b=>b.classList.remove(\'active\'));this.classList.add(\'active\');renderAK()})(this)">Unanswered</button>' +
+      '<button class="active" onclick="(function(){activeFilter=\'all\';document.querySelectorAll(\'.ak-filters button\').forEach(b=>b.classList.remove(\'active\'));this.classList.add(\'active\');renderAK()})(this)">' + __('allFilter') + '</button>' +
+      '<button onclick="(function(){activeFilter=\'correct\';document.querySelectorAll(\'.ak-filters button\').forEach(b=>b.classList.remove(\'active\'));this.classList.add(\'active\');renderAK()})(this)">' + __('correctFilter') + '</button>' +
+      '<button onclick="(function(){activeFilter=\'incorrect\';document.querySelectorAll(\'.ak-filters button\').forEach(b=>b.classList.remove(\'active\'));this.classList.add(\'active\');renderAK()})(this)">' + __('incorrectFilter') + '</button>' +
+      '<button onclick="(function(){activeFilter=\'unanswered\';document.querySelectorAll(\'.ak-filters button\').forEach(b=>b.classList.remove(\'active\'));this.classList.add(\'active\');renderAK()})(this)">' + __('unansweredFilter') + '</button>' +
     '</div>' +
     '<div id="akContent"></div>' +
   '</div>';
@@ -965,10 +1169,10 @@ function showDashboard() {
   const incorrectCount = answeredCount - correctCount;
 
   let html = '<div class="dashboard-summary">' +
-    '<div class="dashboard-stat answered"><div class="num">' + answeredCount + '</div><div class="label">Answered</div></div>' +
-    '<div class="dashboard-stat correct"><div class="num">' + correctCount + '</div><div class="label">Correct</div></div>' +
-    '<div class="dashboard-stat incorrect"><div class="num">' + incorrectCount + '</div><div class="label">Incorrect</div></div>' +
-    '<div class="dashboard-stat"><div class="num">' + (total - answeredCount) + '</div><div class="label">Unanswered</div></div>' +
+    '<div class="dashboard-stat answered"><div class="num">' + answeredCount + '</div><div class="label">' + __('answered') + '</div></div>' +
+    '<div class="dashboard-stat correct"><div class="num">' + correctCount + '</div><div class="label">' + __('correctStat') + '</div></div>' +
+    '<div class="dashboard-stat incorrect"><div class="num">' + incorrectCount + '</div><div class="label">' + __('incorrectStat') + '</div></div>' +
+    '<div class="dashboard-stat"><div class="num">' + (total - answeredCount) + '</div><div class="label">' + __('unanswered') + '</div></div>' +
   '</div>';
 
   function addGroup(groupQs, groupName) {
@@ -987,41 +1191,41 @@ function showDashboard() {
     html += '<div class="dashboard-po">' +
       '<div class="dashboard-po-header">' +
         '<span class="dashboard-po-name">' + groupName + '</span>' +
-        '<span class="dashboard-po-pct">' + gCorrect + '/' + (gCorrect + gIncorrect) + ' correct' + (gCorrect + gIncorrect > 0 ? ' (' + pct + '%)' : '') + '</span>' +
+        '<span class="dashboard-po-pct">' + gCorrect + '/' + (gCorrect + gIncorrect) + ' ' + __('correctShort') + (gCorrect + gIncorrect > 0 ? ' (' + pct + '%)' : '') + '</span>' +
       '</div>' +
       '<div class="dashboard-bar-wrap">' +
         '<div class="dashboard-bar-correct" style="width:' + correctW + '%"></div>' +
         '<div class="dashboard-bar-incorrect" style="width:' + incorrectW + '%"></div>' +
       '</div>' +
       '<div class="dashboard-po-detail">' +
-        '<span style="color:var(--correct)">\u25cf ' + gCorrect + ' correct</span>' +
-        '<span style="color:var(--incorrect)">\u25cf ' + gIncorrect + ' incorrect</span>' +
-        '<span style="color:var(--muted)">\u25cf ' + gUnanswered + ' unanswered</span>' +
+        '<span style="color:var(--correct)">\u25cf ' + gCorrect + ' ' + __('correctShort') + '</span>' +
+        '<span style="color:var(--incorrect)">\u25cf ' + gIncorrect + ' ' + __('incorrectFilter') + '</span>' +
+        '<span style="color:var(--muted)">\u25cf ' + gUnanswered + ' ' + __('unansweredFilter') + '</span>' +
       '</div>' +
     '</div>';
   }
 
   const pos = [...new Set(allQuestions.map(q => q.po))].sort().filter(p => p > 0);
   pos.forEach(po => {
-    addGroup(allQuestions.filter(q => q.po == po), 'PO' + po + ' \u2014 ' + (names[po] || ''));
+    addGroup(allQuestions.filter(q => q.po == po), __('poPrefix') + po + ' \u2014 ' + (names[po] || ''));
   });
 
-  addGroup(allQuestions.filter(q => q.source && q.source.includes('Week 1-3 Review')), 'Review Week 1-3');
-  addGroup(allQuestions.filter(q => q.source && q.source.includes('Week 4-6 Review')), 'Review Week 4-6');
-  addGroup(allQuestions.filter(q => q.source && q.source.includes('Week 7-10 review')), 'Review Week 7-10');
-  addGroup(allQuestions.filter(q => q.source && q.source.includes('TP877_E')), 'Sample Exam \u2014 Glider Licence');
-  addGroup(allQuestions.filter(q => q.source && q.source.includes('PSTAR TP11919')), 'PSTAR TP11919');
+  addGroup(allQuestions.filter(q => q.source && q.source.includes('Week 1-3 Review')), __('reviewWeek13'));
+  addGroup(allQuestions.filter(q => q.source && q.source.includes('Week 4-6 Review')), __('reviewWeek46'));
+  addGroup(allQuestions.filter(q => q.source && q.source.includes('Week 7-10 review')), __('reviewWeek710'));
+  addGroup(allQuestions.filter(q => q.source && q.source.includes('TP877_E')), __('sampleExam'));
+  addGroup(allQuestions.filter(q => q.source && q.source.includes('PSTAR TP11919')), __('pstarLabel'));
 
   if (answeredCount === 0) {
-    html += '<div class="dashboard-empty">Answer some questions first to see your stats.</div>';
+    html += '<div class="dashboard-empty">' + __('answerSome') + '</div>';
   }
 
   const overlay = document.createElement('div');
   overlay.className = 'dashboard-overlay';
   overlay.onclick = e => { if (e.target === overlay) overlay.remove(); };
   overlay.innerHTML = '<div class="dashboard-content" onclick="event.stopPropagation()">' +
-    '<button class="close-btn" onclick="this.closest(\'.dashboard-overlay\').remove()">Close</button>' +
-    '<h2>Performance Dashboard</h2>' +
+    '<button class="close-btn" onclick="this.closest(\'.dashboard-overlay\').remove()">' + __('close') + '</button>' +
+    '<h2>' + __('performanceDashboard') + '</h2>' +
     html +
   '</div>';
   document.body.appendChild(overlay);
@@ -1111,7 +1315,7 @@ document.getElementById('dashboardBtn').addEventListener('click', showDashboard)
 document.getElementById('exportBtn').addEventListener('click', exportResults);
 
 document.getElementById('resetBtn').addEventListener('click', () => {
-  if (confirm('Reset all progress? This will clear your answer history.')) {
+  if (confirm(__('resetConfirm'))) {
     state.results = {};
     state.answeredThisSession = {};
     state.reviewQueue = [];
