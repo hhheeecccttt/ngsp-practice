@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NGSP Practice</title>
+<style>
+:root {
+  --bg: #0f1419;
+  --card: #1a1f2e;
+  --text: #d4dbe8;
+  --text-secondary: #8892a8;
+  --muted: #5a6377;
+  --border: #2a3142;
+  --correct: #34d399;
+  --incorrect: #f87171;
+  --primary: #60a5fa;
+  --primary-hover: #93bbfd;
+  --hover-bg: #1f2740;
+  --btn-bg: #252d3f;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+.container { max-width: 1050px; margin: 0 auto; padding: 16px 20px; display: flex; gap: 20px; align-items: flex-start; }
+.main-area { flex: 1; min-width: 0; }
+
+header {
+  background: var(--card);
+  border-bottom: 2px solid var(--border);
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+header h1 { font-size: 1.1rem; font-weight: 700; letter-spacing: 0.02em; color: var(--primary); }
+header .stats { font-size: 0.82rem; color: var(--text-secondary); }
+
+.controls {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 16px;
+  width: 260px;
+  min-width: 260px;
+  position: sticky;
+  top: 12px;
+  align-self: flex-start;
+}
+.controls > label { font-size: 0.78rem; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.06em; }
+.filter-group { display: flex; flex-direction: column; gap: 6px; }
+.filter-group > label { font-size: 0.78rem; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.06em; }
+.checkbox-group { display: flex; flex-direction: column; gap: 2px; }
+.checkbox-columns { display: flex; flex-direction: column; gap: 10px; }
+.checkbox-column { display: flex; flex-direction: column; gap: 2px; }
+.checkbox-column-header { font-size: 0.7rem; font-weight: 600; color: var(--muted); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.08em; }
+.checkbox-group label { font-weight: 400; font-size: 0.8rem; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; padding: 3px 6px; }
+.checkbox-group label:hover { background: var(--hover-bg); }
+.checkbox-group input[type="checkbox"] { cursor: pointer; accent-color: var(--primary); }
+
+.controls select, .controls button {
+  padding: 5px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.8rem;
+  background: var(--btn-bg);
+  color: var(--text);
+  cursor: pointer;
+  font-family: inherit;
+}
+.controls select { min-width: 130px; }
+.controls select:focus { outline: none; border-color: var(--primary); }
+.controls select option { background: var(--card); color: var(--text); }
+.controls button {
+  background: var(--primary);
+  color: #0f1419;
+  border: none;
+  font-weight: 600;
+  font-size: 0.78rem;
+  padding: 5px 12px;
+}
+.controls button:hover { background: var(--primary-hover); }
+.controls button.secondary { background: transparent; color: var(--text); border: 1px solid var(--border); font-weight: 400; }
+.controls button.secondary:hover { background: var(--hover-bg); }
+
+.question-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 12px;
+}
+.question-meta { font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 14px; display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+.question-text { font-size: 1rem; line-height: 1.65; margin-bottom: 20px; }
+.question-image { margin: 14px 0; text-align: center; }
+.question-image img { max-width: 100%; border: 1px solid var(--border); border-radius: 6px; opacity: 0; transition: opacity 0.35s; }
+.question-image img.loaded { opacity: 1; }
+.options { display: flex; flex-direction: column; gap: 6px; }
+.option {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.12s, border-color 0.12s;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+.option:hover { background: var(--hover-bg); border-color: var(--primary); }
+.option .letter { font-weight: 700; color: var(--primary); min-width: 20px; font-size: 0.82rem; }
+.option.correct { border-color: var(--correct); background: #0a1f15; border-width: 2px; }
+.option.correct .letter { color: var(--correct); }
+.option.incorrect { border-color: var(--incorrect); background: #1f0f12; border-width: 2px; }
+.option.incorrect .letter { color: var(--incorrect); }
+.option.disabled { cursor: default; opacity: 0.6; }
+.option.disabled:hover { background: inherit; border-color: var(--border); }
+.option.reveal-correct { border-color: var(--correct); background: #0a1f15; border-width: 2px; }
+.option.selected { border-color: var(--primary); background: var(--hover-bg); border-width: 2px; }
+.option.selected .letter { color: var(--primary-hover); }
+
+.submit-area { margin-top: 16px; display: flex; align-items: center; gap: 8px; }
+.submit-area .action-btns { display: flex; gap: 8px; flex: 1; justify-content: center; }
+.submit-area button { padding: 8px 28px; border: none; border-radius: 6px; font-size: 0.85rem; font-weight: 600; cursor: pointer; font-family: inherit; transition: background 0.12s; }
+.submit-area .submit-btn { background: var(--primary); color: #0f1419; }
+.submit-area .submit-btn:hover { background: var(--primary-hover); }
+.submit-area .submit-btn:disabled { opacity: 0.35; cursor: default; }
+.submit-area .self-btn { background: var(--btn-bg); color: var(--text); border: 1px solid var(--border) !important; }
+.submit-area .self-btn:hover { background: var(--hover-bg); }
+.submit-area .self-btn.correct-btn { border-color: var(--correct) !important; color: var(--correct); }
+.submit-area .self-btn.correct-btn:hover { background: #0a1f15; }
+.submit-area .self-btn.incorrect-btn { border-color: var(--incorrect) !important; color: var(--incorrect); }
+.submit-area .self-btn.incorrect-btn:hover { background: #1f0f12; }
+
+.feedback { margin-top: 16px; padding: 10px 14px; font-weight: 600; font-size: 0.85rem; text-align: center; border: 2px solid; border-radius: 6px; }
+.feedback.correct { background: #0a1f15; color: var(--correct); border-color: var(--correct); }
+.feedback.incorrect { background: #1f0f12; color: var(--incorrect); border-color: var(--incorrect); }
+
+.nav-buttons { display: flex; gap: 8px; justify-content: center; margin-top: 16px; }
+.nav-buttons button { padding: 8px 24px; border: none; border-radius: 6px; font-size: 0.85rem; font-weight: 600; cursor: pointer; font-family: inherit; transition: background 0.12s; }
+.nav-buttons button:disabled { opacity: 0.3; cursor: default; }
+.nav-buttons .prev { background: var(--btn-bg); color: var(--text); border: 1px solid var(--border); }
+.nav-buttons .prev:hover:not(:disabled) { background: var(--hover-bg); }
+.nav-buttons .next { background: var(--primary); color: #0f1419; }
+.nav-buttons .next:hover:not(:disabled) { background: var(--primary-hover); }
+
+.progress { text-align: center; font-size: 0.78rem; color: var(--text-secondary); margin-top: 12px; }
+.progress-bar-wrap { background: var(--border); height: 3px; margin: -8px 0 12px; overflow: hidden; }
+.progress-bar-fill { background: var(--primary); height: 100%; transition: width 0.25s; }
+
+.review-section { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-top: 12px; }
+.review-section h3 { font-size: 0.9rem; margin-bottom: 14px; }
+.review-section .review-question { padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 0.85rem; }
+.review-section .review-question:last-child { border-bottom: none; }
+.review-section .review-question .q-text { margin-bottom: 4px; }
+.review-section .review-question .q-topic { font-size: 0.78rem; color: var(--text-secondary); margin-top: 6px; }
+.review-section .review-question .q-answer { font-size: 0.8rem; margin-top: 4px; }
+
+.answer-key-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.75); z-index: 1000; overflow-y: auto; padding: 20px; }
+.answer-key-content { background: var(--card); max-width: 680px; margin: 0 auto; padding: 24px; border: 1px solid var(--border); border-radius: 8px; }
+.answer-key-content h2 { margin-bottom: 12px; font-size: 1rem; display: inline-block; font-weight: 500; }
+.answer-key-content .close-btn { float: right; padding: 3px 12px; border: 1px solid var(--border); background: var(--btn-bg); color: var(--text); cursor: pointer; font-size: 0.78rem; font-family: inherit; }
+.answer-key-content .close-btn:hover { background: var(--hover-bg); }
+.ak-filters { margin-bottom: 14px; display: flex; gap: 6px; flex-wrap: wrap; }
+.ak-filters button { padding: 3px 12px; border: 1px solid var(--border); background: transparent; color: var(--text-secondary); cursor: pointer; font-size: 0.78rem; font-family: inherit; transition: background 0.12s; }
+.ak-filters button:hover { border-color: var(--text-secondary); color: var(--text); }
+.ak-filters button.active { background: var(--hover-bg); color: var(--primary); border-color: var(--primary); }
+.ak-group { margin-bottom: 14px; }
+.ak-group-header { display: flex; align-items: center; gap: 8px; padding: 7px 10px; background: var(--btn-bg); border-radius: 6px; cursor: pointer; font-size: 0.82rem; font-weight: 600; user-select: none; transition: background 0.12s; }
+.ak-group-header:hover { background: var(--hover-bg); }
+.ak-group-header .arrow { transition: transform 0.15s; font-size: 0.65rem; color: var(--text-secondary); }
+.ak-group-header .arrow.collapsed { transform: rotate(-90deg); }
+.ak-group-header .count { font-weight: 400; color: var(--text-secondary); font-size: 0.78rem; }
+.ak-group-header .pct { font-size: 0.75rem; font-weight: 400; margin-left: auto; }
+.ak-group-header .pct.good { color: var(--correct); }
+.ak-group-header .pct.ok { color: #fbbf24; }
+.ak-group-header .pct.bad { color: var(--incorrect); }
+.ak-row { display: flex; align-items: center; gap: 8px; padding: 7px 10px; border-bottom: 1px solid var(--border); font-size: 0.8rem; }
+.ak-row:last-child { border-bottom: none; }
+.ak-row .num { width: 30px; font-weight: 600; color: var(--text-secondary); flex-shrink: 0; font-size: 0.75rem; }
+.ak-row .q-text { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 0.78rem; }
+.ak-row .badge { font-size: 0.7rem; font-weight: 700; padding: 1px 8px; flex-shrink: 0; text-align: center; }
+.ak-row .badge.correct { background: #0a1f15; color: var(--correct); border: 1px solid var(--correct); }
+.ak-row .badge.incorrect { background: #1f0f12; color: var(--incorrect); border: 1px solid var(--incorrect); }
+.ak-row .badge.unanswered { background: var(--btn-bg); color: var(--text-secondary); border: 1px solid var(--border); }
+.ak-row .user-badge { margin-left: 2px; }
+.ak-row .sep { color: var(--border); }
+.ak-flag-icon { color: #fbbf24; font-size: 0.65rem; flex-shrink: 0; }
+.ak-hidden { display: none; }
+
+.dashboard-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.75); z-index: 1000; overflow-y: auto; padding: 20px; }
+.dashboard-content { background: var(--card); max-width: 600px; margin: 0 auto; padding: 24px; border: 1px solid var(--border); border-radius: 8px; }
+.dashboard-content h2 { margin-bottom: 8px; font-size: 1rem; font-weight: 500; }
+.dashboard-content .close-btn { float: right; padding: 3px 12px; border: 1px solid var(--border); background: var(--btn-bg); color: var(--text); cursor: pointer; font-size: 0.78rem; font-family: inherit; border-radius: 4px; }
+.dashboard-content .close-btn:hover { background: var(--hover-bg); }
+.dashboard-summary { display: flex; gap: 16px; margin: 14px 0; flex-wrap: wrap; }
+.dashboard-stat { background: var(--btn-bg); border-radius: 6px; padding: 10px 16px; text-align: center; flex: 1; min-width: 80px; }
+.dashboard-stat .num { font-size: 1.3rem; font-weight: 700; }
+.dashboard-stat .label { font-size: 0.7rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 2px; }
+.dashboard-stat.correct .num { color: var(--correct); }
+.dashboard-stat.incorrect .num { color: var(--incorrect); }
+.dashboard-stat.answered .num { color: var(--primary); }
+.dashboard-po { margin-bottom: 12px; }
+.dashboard-po-header { display: flex; justify-content: space-between; align-items: center; font-size: 0.82rem; margin-bottom: 4px; }
+.dashboard-po-name { font-weight: 600; }
+.dashboard-po-pct { font-size: 0.78rem; color: var(--text-secondary); }
+.dashboard-bar-wrap { height: 8px; background: var(--border); border-radius: 4px; overflow: hidden; display: flex; }
+.dashboard-bar-correct { background: var(--correct); height: 100%; transition: width 0.3s; }
+.dashboard-bar-incorrect { background: var(--incorrect); height: 100%; transition: width 0.3s; }
+.dashboard-bar-unanswered { background: var(--muted); height: 100%; transition: width 0.3s; }
+.dashboard-po-detail { font-size: 0.72rem; color: var(--text-secondary); margin-top: 2px; display: flex; gap: 12px; }
+.dashboard-empty { text-align: center; color: var(--text-secondary); padding: 30px 0; font-size: 0.85rem; }
+
+.empty { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+.empty h2 { font-size: 1rem; margin-bottom: 6px; font-weight: 500; }
+.empty p { font-size: 0.82rem; }
+
+.keyboard-hint { text-align: center; font-size: 0.7rem; color: var(--text-secondary); margin: 10px 0 16px; display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+.keyboard-hint kbd { display: inline-block; padding: 0 5px; border: 1px solid var(--border); background: var(--btn-bg); font-family: inherit; font-size: 0.68rem; line-height: 1.5; }
+
+.flag-btn { background: transparent; border: 1px solid var(--border); cursor: pointer; font-size: 0.78rem; padding: 3px 10px; color: var(--text-secondary); font-family: inherit; border-radius: 6px; transition: all 0.12s; display: inline-flex; align-items: center; gap: 4px; margin-left: auto; }
+.flag-btn:hover { border-color: var(--text-secondary); color: var(--text); background: var(--hover-bg); }
+.flag-btn.on { border-color: #f87171; color: #f87171; background: #1f0f12; }
+.flag-btn.on:hover { background: #3a1414; border-color: #fca5a5; color: #fca5a5; }
+
+.copy-meta-btn { background: transparent; border: 1px solid var(--border); cursor: pointer; font-size: 0.78rem; padding: 3px 10px; color: var(--text-secondary); font-family: inherit; border-radius: 6px; transition: all 0.12s; display: inline-flex; align-items: center; gap: 4px; }
+.copy-meta-btn:hover { border-color: var(--text-secondary); color: var(--text); background: var(--hover-bg); }
+
+.copy-feedback { font-size: 0.7rem; color: var(--muted); animation: copyPulse 0.6s ease; }
+@keyframes copyPulse { 0% { opacity: 1; } 100% { opacity: 0; } }
+
+@media (max-width: 720px) {
+  .container { flex-direction: column; padding: 10px; }
+  .controls { width: 100%; min-width: 0; position: static; }
+  .question-card { padding: 16px; }
+  .option { padding: 8px 10px; }
+  .controls select { min-width: 100px; }
+  .keyboard-hint { gap: 10px; font-size: 0.65rem; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>NGSP Practice</h1>
+  <div style="display:flex;align-items:center;gap:12px">
+    <div class="stats" id="headerStats">Loading...</div>
+    <button id="langToggle" onclick="toggleLang()" style="font-size:0.75rem;padding:4px 10px;border:1px solid var(--border);border-radius:6px;background:var(--btn-bg);color:var(--text);cursor:pointer;font-family:inherit;font-weight:600">FR</button>
+  </div>
+</header>
+
+<div class="container">
+
+<div class="controls">
+  <div class="filter-group">
+    <label>Source:</label>
+    <div id="sourceFilters" class="checkbox-group"></div>
+  </div>
+
+  <div style="margin-top:10px;display:flex;flex-direction:column;gap:6px">
+    <label for="modeToggle" style="font-size:0.78rem;font-weight:600;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.06em">Mode:</label>
+    <select id="modeToggle">
+      <option value="all">All Questions</option>
+      <option value="incorrect">Incorrect Only</option>
+      <option value="flagged">Flagged Only</option>
+    </select>
+    <button id="shuffleBtn" class="secondary">Shuffle</button>
+    <button id="dashboardBtn" class="secondary">Dashboard</button>
+    <button id="answerKeyBtn" class="secondary">Answer Key</button>
+    <button id="exportBtn" class="secondary">Export JSON</button>
+    <button id="resetBtn">Reset Progress</button>
+  </div>
+</div>
+
+<div class="main-area">
+
+<div class="keyboard-hint">
+  <span><kbd>1</kbd><kbd>2</kbd><kbd>3</kbd><kbd>4</kbd> select answer</span>
+  <span><kbd>Enter</kbd> submit / next</span>
+  <span><kbd>←</kbd> <kbd>→</kbd> navigate</span>
+  <span><kbd>F</kbd> flag / unflag</span>
+</div>
+
+<div class="progress-bar-wrap" id="progressBarWrap" style="display:none">
+  <div class="progress-bar-fill" id="progressBarFill" style="width:0%"></div>
+</div>
+
+<div id="mainContent">
+  <div class="empty">
+    <h2>Select a unit to begin</h2>
+    <p>Questions will appear here.</p>
+  </div>
+</div>
+
+<div id="reviewSection" class="review-section" style="display:none">
+  <h3>Questions to Review (<span id="reviewCount">0</span>)</h3>
+  <div id="reviewList"></div>
+</div>
+
+</div>
+
+</div>
+
+<script>
+// ===== DATA =====
+let allQuestions = [];
+let state = {
+  filtered: [],
+  currentIndex: 0,
+  answered: {},
+  results: {},
+  answeredThisSession: {},
+  selectedAnswer: null,
+  sourceFilters: [],
+  mode: 'all',
+  reviewQueue: [],
+  flagged: {},
+  lang: 'en',
+};
+
+// ===== LOAD DATA =====
+async function loadData() {
+  const file = state.lang === 'fr' ? 'questions_fr.json' : 'questions.json';
+  try {
+    const resp = await fetch(file);
+    const data = await resp.json();
+    allQuestions = data.questions.map((q, i) => ({ ...q, uid: q.source + '-' + q.id + '-' + i }));
+    document.getElementById('langToggle').textContent = state.lang === 'fr' ? 'EN' : 'FR';
+    init();
+  } catch (e) {
+    document.getElementById('headerStats').textContent = 'Error loading ' + file;
+  }
+}
+
+function toggleLang() {
+  state.lang = state.lang === 'fr' ? 'en' : 'fr';
+  document.getElementById('langToggle').textContent = state.lang === 'fr' ? 'EN' : 'FR';
+  state.results = {};
+  state.sourceFilters = [];
+  state.mode = 'all';
+  state.flagged = {};
+  state.currentIndex = 0;
+  state.selectedAnswer = null;
+  state.answeredThisSession = {};
+  saveState();
+  document.getElementById('sourceFilters').innerHTML = '<div class="checkbox-group" style="padding:12px;text-align:center;color:var(--muted)">Loading...</div>';
+  loadData();
+}
+
+// ===== INIT =====
+function init() {
+  try {
+    const saved = localStorage.getItem('ngsp_state');
+    if (saved) {
+      const parsed = JSON.parse(saved);
+      state.results = parsed.results || {};
+      state.sourceFilters = parsed.sourceFilters || [];
+      state.mode = parsed.mode || 'all';
+      state.flagged = parsed.flagged || {};
+      state.lang = parsed.lang || 'en';
+    }
+  } catch (e) {}
+
+  const container = document.getElementById('sourceFilters');
+  container.innerHTML = '';
+
+  function countQs(filterFn) {
+    return allQuestions.filter(filterFn).length;
+  }
+
+  const allCb = document.createElement('label');
+  allCb.innerHTML = `<input type="checkbox" value="all" id="cb-all"> All (${allQuestions.length})`;
+  container.appendChild(allCb);
+
+  const columns = document.createElement('div');
+  columns.className = 'checkbox-columns';
+
+  const leftCol = document.createElement('div');
+  leftCol.className = 'checkbox-column';
+  const leftHeader = document.createElement('div');
+  leftHeader.className = 'checkbox-column-header';
+  leftHeader.textContent = 'Individual Units';
+  leftCol.appendChild(leftHeader);
+
+  const allUnitsCb = document.createElement('label');
+  allUnitsCb.innerHTML = `<input type="checkbox" value="all-units" id="cb-all-units"> All Units`;
+  leftCol.appendChild(allUnitsCb);
+
+  const pos = [...new Set(allQuestions.map(q => q.po))].sort().filter(p => p > 0);
+  const namesEn = {401:'Air Law',402:'Navigation',403:'Meteorology',404:'Airframes',405:'Theory of Flight',406:'Instruments',408:'Human Factors'};
+  const namesFr = {401:'Droit aérien',402:'Navigation',403:'Météorologie',404:'Cellules',405:'Théorie du vol',406:'Instruments',408:'Facteurs humains'};
+  const names = state.lang === 'fr' ? namesFr : namesEn;
+  pos.forEach(po => {
+    const n = countQs(q => q.po == po && q.source && (q.source.startsWith(po + ' ') || q.source.startsWith(po + '.')));
+    const cb = document.createElement('label');
+    cb.innerHTML = `<input type="checkbox" value="${po}" class="unit-cb"> PO${po} ${names[po] || ''} (${n})`;
+    leftCol.appendChild(cb);
+  });
+  columns.appendChild(leftCol);
+
+  const rightCol = document.createElement('div');
+  rightCol.className = 'checkbox-column';
+  const rightHeader = document.createElement('div');
+  rightHeader.className = 'checkbox-column-header';
+  rightHeader.textContent = 'Comprehensive Reviews';
+  rightCol.appendChild(rightHeader);
+
+  const allReviewsCb = document.createElement('label');
+  allReviewsCb.innerHTML = `<input type="checkbox" value="all-reviews" id="cb-all-reviews"> All Reviews`;
+  rightCol.appendChild(allReviewsCb);
+
+  const reviews = [
+    { value: 'review-13', label: 'Review Week 1-3', filter: s => s && (s.includes('Week 1-3 Review') || s.includes('Semaine 1-3')) },
+    { value: 'review-46', label: 'Review Week 4-6', filter: s => s && (s.includes('Week 4-6 Review') || s.includes('Semaine 4-6')) },
+    { value: 'review-710', label: 'Review Week 7-10', filter: s => s && (s.includes('Week 7-10 review') || s.includes('Semaine 7-10')) },
+  ];
+  reviews.forEach(r => {
+    const n = countQs(q => r.filter(q.source));
+    const cb = document.createElement('label');
+    cb.innerHTML = `<input type="checkbox" value="${r.value}" class="review-cb"> ${r.label} (${n})`;
+    rightCol.appendChild(cb);
+  });
+  columns.appendChild(rightCol);
+
+  const examCol = document.createElement('div');
+  examCol.className = 'checkbox-column';
+  const examHeader = document.createElement('div');
+  examHeader.className = 'checkbox-column-header';
+  examHeader.textContent = 'Sample Exams';
+  examCol.appendChild(examHeader);
+
+  const examN = countQs(q => q.source && q.source.includes('TP877_E'));
+  const examCb = document.createElement('label');
+  examCb.innerHTML = `<input type="checkbox" value="exam-glider"> Glider Licence TP877E (${examN})`;
+  examCol.appendChild(examCb);
+
+  const tp11919N = countQs(q => q.source && q.source.includes('PSTAR TP11919'));
+  const tp11919Cb = document.createElement('label');
+  tp11919Cb.innerHTML = `<input type="checkbox" value="pstar-tp11919"> PSTAR TP11919 (${tp11919N})`;
+  examCol.appendChild(tp11919Cb);
+  columns.appendChild(examCol);
+
+  container.appendChild(columns);
+
+  if (state.sourceFilters.length > 0) {
+    state.sourceFilters.forEach(v => {
+      const cb = container.querySelector(`input[value="${v}"]`);
+      if (cb) cb.checked = true;
+    });
+  } else {
+    container.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+      if (cb.value !== 'all' && cb.value !== 'all-units' && cb.value !== 'all-reviews') cb.checked = true;
+    });
+    state.sourceFilters = pos.map(p => String(p)).concat(['review-13', 'review-46', 'review-710', 'exam-glider', 'pstar-tp11919']);
+  }
+  syncAllReviews();
+  syncAllUnits();
+  syncAllCheckbox();
+
+  container.addEventListener('change', e => {
+    if (e.target.tagName !== 'INPUT') return;
+
+    if (e.target.value === 'all') {
+      const checkAll = e.target.checked;
+      container.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+        if (cb.value !== 'all') cb.checked = checkAll;
+      });
+      syncAllReviews();
+      syncAllUnits();
+      updateFiltersFromCheckboxes();
+    } else if (e.target.value === 'all-units') {
+      const checkAll = e.target.checked;
+      container.querySelectorAll('.unit-cb').forEach(cb => cb.checked = checkAll);
+      syncAllCheckbox();
+      updateFiltersFromCheckboxes();
+    } else if (e.target.value === 'all-reviews') {
+      const checkAll = e.target.checked;
+      container.querySelectorAll('.review-cb').forEach(cb => cb.checked = checkAll);
+      syncAllCheckbox();
+      updateFiltersFromCheckboxes();
+    } else {
+      syncAllReviews();
+      syncAllUnits();
+      syncAllCheckbox();
+      updateFiltersFromCheckboxes();
+    }
+    saveState();
+    applyFilter();
+  });
+
+  function syncAllCheckbox() {
+    const allSpecific = container.querySelectorAll('input[type="checkbox"]:not([value="all"]):not([value="all-reviews"])');
+    document.getElementById('cb-all').checked = [...allSpecific].every(cb => cb.checked);
+  }
+
+  function syncAllReviews() {
+    const reviewCbs = container.querySelectorAll('.review-cb');
+    document.getElementById('cb-all-reviews').checked = [...reviewCbs].every(cb => cb.checked);
+  }
+
+  function syncAllUnits() {
+    const unitCbs = container.querySelectorAll('.unit-cb');
+    const au = document.getElementById('cb-all-units');
+    if (au) au.checked = [...unitCbs].every(cb => cb.checked);
+  }
+
+  function updateFiltersFromCheckboxes() {
+    const checked = [];
+    container.querySelectorAll('input[type="checkbox"]:checked').forEach(cb => {
+      const v = cb.value;
+      if (v !== 'all' && v !== 'all-reviews') checked.push(v);
+    });
+    state.sourceFilters = checked;
+  }
+
+  document.getElementById('modeToggle').value = state.mode;
+
+  applyFilter();
+}
+
+// ===== FILTERING =====
+function applyFilter() {
+  let filtered = allQuestions;
+
+  const reviewSources = {
+    'review-13': 'Week 1-3 Review',
+    'review-46': 'Week 4-6 Review',
+    'review-710': 'Week 7-10 review',
+  };
+
+  if (state.sourceFilters.length > 0) {
+    filtered = filtered.filter(q => {
+      return state.sourceFilters.some(f => {
+        if (f.startsWith('review-')) {
+          return q.source && q.source.includes(reviewSources[f]);
+        }
+        if (f === 'exam-glider') {
+          return q.source && q.source.includes('TP877_E');
+        }
+        if (f === 'pstar-tp11919') {
+          return q.source && q.source.includes('PSTAR TP11919');
+        }
+        return q.po == f && q.source && (q.source.startsWith(f + ' ') || q.source.startsWith(f + '.'));
+      });
+    });
+  }
+
+  if (state.mode === 'incorrect') {
+    const incorrectIds = Object.entries(state.results)
+      .filter(([, r]) => !r.correct)
+      .map(([id]) => id);
+    filtered = filtered.filter(q => incorrectIds.includes(q.uid));
+  } else if (state.mode === 'flagged') {
+    filtered = filtered.filter(q => state.flagged[q.uid]);
+  }
+
+  state.filtered = filtered;
+  state.currentIndex = 0;
+  state.selectedAnswer = null;
+  state.answeredThisSession = {};
+  state.reviewQueue = [];
+
+  updateHeaderStats();
+  render();
+}
+
+// ===== RENDER =====
+function render() {
+  const container = document.getElementById('mainContent');
+  const filtered = state.filtered;
+
+  if (filtered.length === 0) {
+    const msgs = { incorrect: 'No incorrect questions!', flagged: 'No flagged questions!' };
+    const hints = { incorrect: 'Great job! Try a different unit or switch to All Questions mode.', flagged: 'Flag some questions first by clicking the flag icon.' };
+    container.innerHTML = `
+      <div class="empty">
+        <h2>${msgs[state.mode] || 'No questions match'}</h2>
+        <p>${hints[state.mode] || 'Try a different filter.'}</p>
+      </div>`;
+    document.getElementById('reviewSection').style.display = 'none';
+    return;
+  }
+
+  const q = filtered[state.currentIndex];
+  const progress = `${state.currentIndex + 1} / ${filtered.length}`;
+  const answered = state.results[q.uid];
+  const userAnswer = answered ? answered.answered : null;
+  const isCorrect = answered ? answered.correct : null;
+  const selected = state.selectedAnswer;
+  const isFlagged = !!state.flagged[q.uid];
+
+  let optionsHtml = '';
+  const letters = ['a', 'b', 'c', 'd'];
+  letters.forEach((letter, i) => {
+    const text = q.options[letter];
+    if (!text) return;
+    let cls = 'option';
+    if (userAnswer) {
+      cls += ' disabled';
+      if (q.correct && letter === q.correct) cls += ' reveal-correct';
+      if (!q.correct && letter === userAnswer) cls += isCorrect ? ' correct' : ' incorrect';
+      if (q.correct && letter === userAnswer && !isCorrect) cls += ' incorrect';
+      if (q.correct && letter === userAnswer && isCorrect) cls += ' correct';
+    } else if (selected === letter) {
+      cls += ' selected';
+    }
+    optionsHtml += `
+      <div class="${cls}" data-opt="${letter}" ${userAnswer ? '' : 'onclick="selectOption(this)"'}>
+        <span class="letter">${letter.toUpperCase()}</span>
+        <span>${text}</span>
+      </div>`;
+  });
+
+  const namesEn2 = {401:'Air Law',402:'Navigation',403:'Meteorology',404:'Airframes',405:'Theory of Flight',406:'Instruments',408:'Human Factors'};
+  const namesFr2 = {401:'Droit aérien',402:'Navigation',403:'Météorologie',404:'Cellules',405:'Théorie du vol',406:'Instruments',408:'Facteurs humains'};
+  const names = state.lang === 'fr' ? namesFr2 : namesEn2;
+  const isPo = q.po > 0;
+  const nameStr = isPo ? `<span style="font-weight:600;color:var(--primary)">PO ${q.po} - ${names[q.po] || ''}</span>` : '';
+
+  let feedbackHtml = '';
+  let submitHtml = '';
+  if (!userAnswer) {
+    if (q.correct) {
+      submitHtml = `<div class="submit-area">
+        <div class="action-btns"><button class="submit-btn" onclick="submitAnswer()" ${selected ? '' : 'disabled'}>Submit Answer</button></div>
+      </div>`;
+    } else {
+      submitHtml = `<div class="submit-area">
+        <div class="action-btns"><button class="self-btn correct-btn" onclick="selfMark(true)">Got it Right</button><button class="self-btn incorrect-btn" onclick="selfMark(false)">Got it Wrong</button></div>
+      </div>`;
+    }
+  } else {
+    if (q.correct) {
+      const fbClass = isCorrect ? 'correct' : 'incorrect';
+      const fbText = isCorrect ? 'Correct!' : `Incorrect. The correct answer was ${q.correct.toUpperCase()}.`;
+      feedbackHtml = `<div class="feedback ${fbClass}">${fbText}</div>`;
+    } else {
+      const fbClass = isCorrect ? 'correct' : 'incorrect';
+      const fbText = isCorrect ? 'Correct! (self-marked)' : 'Incorrect (self-marked)';
+      feedbackHtml = `<div class="feedback ${fbClass}">${fbText} <span style="font-weight:400;font-size:0.8rem">(no verified answer on file)</span></div>`;
+    }
+  }
+
+  const topicDisplay = (q.topic || '').replace(/^Comprehensive\s*-\s*/, '').replace(/^[\d.]+\s*-\s*/, '');
+  const noAnswerBadge = !q.correct ? '<span style="font-size:0.7rem;background:#3d2e00;color:#ffb300;padding:2px 8px;margin-left:8px">No verified answer</span>' : '';
+
+  let sourceLabel = q.source || '';
+  if (sourceLabel.includes('TP877_E')) sourceLabel = 'Sample Exam \u2014 Glider Licence';
+  else if (sourceLabel.includes('PSTAR TP11919')) sourceLabel = 'PSTAR TP11919';
+  else if (sourceLabel.includes('Week')) sourceLabel = sourceLabel.replace(/^[\d. ]+/, '');
+  else sourceLabel = sourceLabel.replace(/^[\d.]+/, '').trim();
+  const sourceStr = q.source && (q.source.includes('PSTAR') || q.source.includes('TP877_E') || q.source.includes('Week')) ? `<span style="font-weight:600;color:var(--primary)">${sourceLabel}</span>` : '';
+
+  container.innerHTML = `
+    <div class="question-card">
+      <div class="question-meta">
+        ${sourceStr}
+        <span>${nameStr}</span>
+        <span>${topicDisplay}${noAnswerBadge}</span>
+        <span>Question ${progress}</span>
+        <button class="copy-meta-btn" onclick="copyQuestion()" title="Copy to clipboard">Copy</button>
+        <button class="flag-btn ${isFlagged ? 'on' : ''}" onclick="toggleFlag()" title="Flag for review"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V3"/><path d="M4 3h12l-1 5l1 5H4"/></svg> Flag</button>
+      </div>
+      <div class="question-text">${q.question}</div>
+      ${q.image ? `<div class="question-image"><img src="images/${q.image}" alt="Reference chart" loading="lazy" onload="this.classList.add('loaded')" onerror="this.style.display='none'"></div>` : ''}
+      <div class="options">${optionsHtml}</div>
+      ${submitHtml}
+      ${feedbackHtml}
+    </div>
+    <div class="nav-buttons">
+      <button class="prev" onclick="prevQuestion()" ${state.currentIndex === 0 ? 'disabled' : ''}>Previous</button>
+      <button class="next" onclick="nextQuestion()">${state.currentIndex < filtered.length - 1 ? 'Next' : 'Done'}</button>
+    </div>
+    <div class="progress">${progress}</div>
+  `;
+
+  updateProgressBar();
+  updateReviewSection();
+}
+
+function selectOption(el) {
+  state.selectedAnswer = el.dataset.opt;
+  render();
+}
+
+function submitAnswer() {
+  const q = state.filtered[state.currentIndex];
+  const chosen = state.selectedAnswer;
+  if (!chosen || state.results[q.uid]) return;
+
+  if (!q.correct) {
+    selfMark(true);
+    return;
+  }
+
+  const correct = chosen === q.correct;
+  state.results[q.uid] = { correct, answered: chosen };
+  state.answeredThisSession[q.uid] = true;
+  state.selectedAnswer = null;
+
+  if (!correct) {
+    state.reviewQueue.push(q);
+  }
+
+  saveState();
+  render();
+}
+
+function selfMark(correct) {
+  const q = state.filtered[state.currentIndex];
+  const chosen = state.selectedAnswer;
+  if (state.results[q.uid]) return;
+
+  state.results[q.uid] = { correct, answered: chosen || '?', unverified: true };
+  state.answeredThisSession[q.uid] = true;
+  state.selectedAnswer = null;
+
+  if (!correct) {
+    state.reviewQueue.push({...q, _userAnswer: chosen});
+  }
+
+  saveState();
+  render();
+}
+
+function toggleFlag() {
+  const q = state.filtered[state.currentIndex];
+  if (!q) return;
+  if (state.flagged[q.uid]) {
+    delete state.flagged[q.uid];
+  } else {
+    state.flagged[q.uid] = true;
+  }
+  saveState();
+  render();
+}
+
+function copyQuestion() {
+  const q = state.filtered[state.currentIndex];
+  if (!q) return;
+  const letters = ['a', 'b', 'c', 'd'];
+  let text = q.question + '\n\n';
+  letters.forEach(l => {
+    if (q.options[l]) text += l.toUpperCase() + ') ' + q.options[l] + '\n';
+  });
+  const correct = q.correct ? q.correct.toUpperCase() : 'N/A';
+  text += '\nCorrect answer: ' + correct;
+  const result = state.results[q.uid];
+  if (result) text += '\nYour answer: ' + (result.answered || '?').toUpperCase() + (result.correct ? ' ✓' : ' ✗');
+  navigator.clipboard.writeText(text).catch(() => {});
+  const btn = document.querySelector('.question-card .copy-meta-btn');
+  if (btn) {
+    const orig = btn.textContent;
+    btn.textContent = 'Copied!';
+    setTimeout(() => btn.textContent = orig, 800);
+  }
+}
+
+function nextQuestion() {
+  if (state.currentIndex < state.filtered.length - 1) {
+    state.currentIndex++;
+    render();
+  }
+}
+
+function prevQuestion() {
+  if (state.currentIndex > 0) {
+    state.currentIndex--;
+    render();
+  }
+}
+
+function updateHeaderStats() {
+  const total = allQuestions.length;
+  const answered = Object.keys(state.results).length;
+  const correct = Object.values(state.results).filter(r => r.correct).length;
+  const flagged = Object.keys(state.flagged).length;
+  let parts = `${answered}/${total} answered, ${correct} correct (${total > 0 ? Math.round(correct/total*100) : 0}%)`;
+  if (flagged > 0) parts += `, ${flagged} flagged`;
+  document.getElementById('headerStats').textContent = parts;
+}
+
+function updateProgressBar() {
+  const wrap = document.getElementById('progressBarWrap');
+  const fill = document.getElementById('progressBarFill');
+  const filtered = state.filtered;
+  if (filtered.length === 0) { wrap.style.display = 'none'; return; }
+  wrap.style.display = 'block';
+  const pct = Math.round((state.currentIndex + 1) / filtered.length * 100);
+  fill.style.width = pct + '%';
+}
+
+function updateReviewSection() {
+  const reviewDiv = document.getElementById('reviewSection');
+  const reviewList = document.getElementById('reviewList');
+  const countSpan = document.getElementById('reviewCount');
+
+  const incorrectIds = Object.entries(state.results)
+    .filter(([, r]) => !r.correct)
+    .map(([id]) => id);
+  const incorrect = allQuestions.filter(q => incorrectIds.includes(q.uid));
+
+  if (incorrect.length === 0) {
+    reviewDiv.style.display = 'none';
+    return;
+  }
+
+  reviewDiv.style.display = 'block';
+  countSpan.textContent = incorrect.length;
+
+  const letters = ['a', 'b', 'c', 'd'];
+  reviewList.innerHTML = incorrect.slice(0, 20).map(q => {
+    const result = state.results[q.uid];
+    const userAns = result ? result.answered : '?';
+    const choices = letters.map(l => {
+      const txt = q.options ? q.options[l] : '';
+      if (!txt) return '';
+      let mark = '';
+      if (l === userAns) mark = ' ✗';
+      if (l === q.correct) mark = ' ✓';
+      return '<div style="padding-left:12px;font-size:0.8rem;' + (mark ? 'font-weight:600' : '') + '">' + l.toUpperCase() + ') ' + txt + mark + '</div>';
+    }).join('');
+    return '<div class="review-question">' +
+      '<div class="q-text">' + q.question + '</div>' +
+      '<div class="q-answer">' + choices + '</div>' +
+      '<div class="q-topic">' + (q.po ? 'PO ' + q.po + ' - ' : '') + 'Your answer: ' + userAns.toUpperCase() + ', Correct: ' + (q.correct ? q.correct.toUpperCase() : 'N/A') + '</div>' +
+    '</div>';
+  }).join('');
+
+  if (incorrect.length > 20) {
+    reviewList.innerHTML += '<div class="review-question" style="color:var(--muted)">...and ' + (incorrect.length - 20) + ' more</div>';
+  }
+}
+
+function saveState() {
+  try {
+    localStorage.setItem('ngsp_state', JSON.stringify({
+      results: state.results,
+      sourceFilters: state.sourceFilters,
+      mode: state.mode,
+      flagged: state.flagged,
+      lang: state.lang,
+    }));
+  } catch (e) {}
+  updateHeaderStats();
+}
+
+function showAnswerKey() {
+  const qs = state.filtered.length > 0 ? state.filtered : allQuestions;
+  const overlay = document.createElement('div');
+  overlay.className = 'answer-key-overlay';
+  overlay.onclick = e => { if (e.target === overlay) overlay.remove(); };
+
+  const namesEn2 = {401:'Air Law',402:'Navigation',403:'Meteorology',404:'Airframes',405:'Theory of Flight',406:'Instruments',408:'Human Factors'};
+  const namesFr2 = {401:'Droit aérien',402:'Navigation',403:'Météorologie',404:'Cellules',405:'Théorie du vol',406:'Instruments',408:'Facteurs humains'};
+  const names = state.lang === 'fr' ? namesFr2 : namesEn2;
+
+  const groups = {};
+  qs.forEach(q => {
+    let key;
+    if (q.source && q.source.includes('TP877_E')) key = 'Sample Exam \u2014 Glider Licence';
+    else if (q.source && q.source.includes('PSTAR TP11919')) key = 'PSTAR TP11919 Questions';
+    else if (q.source && q.source.includes('Week 1-3 Review')) key = 'Review Week 1-3';
+    else if (q.source && q.source.includes('Week 4-6 Review')) key = 'Review Week 4-6';
+    else if (q.source && q.source.includes('Week 7-10 review')) key = 'Review Week 7-10';
+    else key = 'PO ' + q.po + ' \u2014 ' + (names[q.po] || '');
+    if (!groups[key]) groups[key] = [];
+    groups[key].push(q);
+  });
+
+  let activeFilter = 'all';
+  let content;
+
+  function getStatus(q) {
+    const r = state.results[q.uid];
+    if (!r) return 'unanswered';
+    return r.correct ? 'correct' : 'incorrect';
+  }
+
+  function calcPct(questions) {
+    let correct = 0, incorrect = 0;
+    questions.forEach(q => {
+      const s = getStatus(q);
+      if (s === 'correct') correct++;
+      else if (s === 'incorrect') incorrect++;
+    });
+    const total = correct + incorrect;
+    return total > 0 ? Math.round(correct / total * 100) : null;
+  }
+
+  function pctClass(pct) {
+    if (pct === null) return '';
+    if (pct >= 80) return 'good';
+    if (pct >= 60) return 'ok';
+    return 'bad';
+  }
+
+  function renderAK() {
+    let html = '';
+    for (const [group, questions] of Object.entries(groups)) {
+      const filtered = activeFilter === 'all' ? questions : questions.filter(q => getStatus(q) === activeFilter);
+      if (filtered.length === 0) continue;
+
+      const pct = calcPct(filtered);
+      const pctStr = pct !== null ? pct + '%' : '';
+      const pctHtml = pctStr ? '<span class="pct ' + pctClass(pct) + '">' + pctStr + '</span>' : '';
+
+      html += '<div class="ak-group">' +
+        '<div class="ak-group-header" onclick="this.nextElementSibling.classList.toggle(\'ak-hidden\');this.querySelector(\'.arrow\').classList.toggle(\'collapsed\')">' +
+          '<span class="arrow">\u25bc</span> ' + group + ' <span class="count">(' + filtered.length + ')</span>' + pctHtml +
+        '</div><div>';
+      filtered.forEach((q, idx) => {
+        const r = state.results[q.uid];
+        const status = getStatus(q);
+        const userAns = r ? r.answered : null;
+        const correctAns = q.correct || '?';
+        const flagIcon = state.flagged[q.uid] ? '<span class="ak-flag-icon">\u2605</span>' : '';
+        const userBadge = userAns ? '<span class="badge ' + status + ' user-badge">you: ' + userAns.toUpperCase() + '</span>' : '';
+        html += '<div class="ak-row">' +
+          '<span class="num">' + (idx + 1) + '</span>' +
+          flagIcon +
+          '<span class="q-text" title="' + q.question.replace(/"/g,'&quot;') + '">' + q.question + '</span>' +
+          '<span class="badge correct">' + correctAns.toUpperCase() + '</span>' +
+          (userBadge ? '<span class="sep">|</span>' : '') +
+          userBadge +
+        '</div>';
+      });
+      html += '</div></div>';
+    }
+    content.innerHTML = html;
+  }
+
+  overlay.innerHTML = '<div class="answer-key-content" onclick="event.stopPropagation()">' +
+    '<button class="close-btn" onclick="this.closest(\'.answer-key-overlay\').remove()">Close</button>' +
+    '<h2>Answer Key (' + qs.length + ' questions)</h2>' +
+    '<div class="ak-filters">' +
+      '<button class="active" onclick="(function(){activeFilter=\'all\';document.querySelectorAll(\'.ak-filters button\').forEach(b=>b.classList.remove(\'active\'));this.classList.add(\'active\');renderAK()})(this)">All</button>' +
+      '<button onclick="(function(){activeFilter=\'correct\';document.querySelectorAll(\'.ak-filters button\').forEach(b=>b.classList.remove(\'active\'));this.classList.add(\'active\');renderAK()})(this)">Correct</button>' +
+      '<button onclick="(function(){activeFilter=\'incorrect\';document.querySelectorAll(\'.ak-filters button\').forEach(b=>b.classList.remove(\'active\'));this.classList.add(\'active\');renderAK()})(this)">Incorrect</button>' +
+      '<button onclick="(function(){activeFilter=\'unanswered\';document.querySelectorAll(\'.ak-filters button\').forEach(b=>b.classList.remove(\'active\'));this.classList.add(\'active\');renderAK()})(this)">Unanswered</button>' +
+    '</div>' +
+    '<div id="akContent"></div>' +
+  '</div>';
+  document.body.appendChild(overlay);
+  content = overlay.querySelector('#akContent');
+  renderAK();
+}
+
+function showDashboard() {
+  const namesEn2 = {401:'Air Law',402:'Navigation',403:'Meteorology',404:'Airframes',405:'Theory of Flight',406:'Instruments',408:'Human Factors'};
+  const namesFr2 = {401:'Droit aérien',402:'Navigation',403:'Météorologie',404:'Cellules',405:'Théorie du vol',406:'Instruments',408:'Facteurs humains'};
+  const names = state.lang === 'fr' ? namesFr2 : namesEn2;
+
+  const total = allQuestions.length;
+  const answeredCount = Object.keys(state.results).length;
+  const correctCount = Object.values(state.results).filter(r => r.correct).length;
+  const incorrectCount = answeredCount - correctCount;
+
+  let html = '<div class="dashboard-summary">' +
+    '<div class="dashboard-stat answered"><div class="num">' + answeredCount + '</div><div class="label">Answered</div></div>' +
+    '<div class="dashboard-stat correct"><div class="num">' + correctCount + '</div><div class="label">Correct</div></div>' +
+    '<div class="dashboard-stat incorrect"><div class="num">' + incorrectCount + '</div><div class="label">Incorrect</div></div>' +
+    '<div class="dashboard-stat"><div class="num">' + (total - answeredCount) + '</div><div class="label">Unanswered</div></div>' +
+  '</div>';
+
+  function addGroup(groupQs, groupName) {
+    const gTotal = groupQs.length;
+    let gCorrect = 0, gIncorrect = 0, gUnanswered = 0;
+    groupQs.forEach(q => {
+      const r = state.results[q.uid];
+      if (!r) gUnanswered++;
+      else if (r.correct) gCorrect++;
+      else gIncorrect++;
+    });
+    const pct = gCorrect > 0 ? Math.round(gCorrect / (gCorrect + gIncorrect) * 100) : 0;
+    const correctW = gTotal > 0 ? (gCorrect / gTotal * 100) : 0;
+    const incorrectW = gTotal > 0 ? (gIncorrect / gTotal * 100) : 0;
+
+    html += '<div class="dashboard-po">' +
+      '<div class="dashboard-po-header">' +
+        '<span class="dashboard-po-name">' + groupName + '</span>' +
+        '<span class="dashboard-po-pct">' + gCorrect + '/' + (gCorrect + gIncorrect) + ' correct' + (gCorrect + gIncorrect > 0 ? ' (' + pct + '%)' : '') + '</span>' +
+      '</div>' +
+      '<div class="dashboard-bar-wrap">' +
+        '<div class="dashboard-bar-correct" style="width:' + correctW + '%"></div>' +
+        '<div class="dashboard-bar-incorrect" style="width:' + incorrectW + '%"></div>' +
+      '</div>' +
+      '<div class="dashboard-po-detail">' +
+        '<span style="color:var(--correct)">\u25cf ' + gCorrect + ' correct</span>' +
+        '<span style="color:var(--incorrect)">\u25cf ' + gIncorrect + ' incorrect</span>' +
+        '<span style="color:var(--muted)">\u25cf ' + gUnanswered + ' unanswered</span>' +
+      '</div>' +
+    '</div>';
+  }
+
+  const pos = [...new Set(allQuestions.map(q => q.po))].sort().filter(p => p > 0);
+  pos.forEach(po => {
+    addGroup(allQuestions.filter(q => q.po == po), 'PO' + po + ' \u2014 ' + (names[po] || ''));
+  });
+
+  addGroup(allQuestions.filter(q => q.source && q.source.includes('Week 1-3 Review')), 'Review Week 1-3');
+  addGroup(allQuestions.filter(q => q.source && q.source.includes('Week 4-6 Review')), 'Review Week 4-6');
+  addGroup(allQuestions.filter(q => q.source && q.source.includes('Week 7-10 review')), 'Review Week 7-10');
+  addGroup(allQuestions.filter(q => q.source && q.source.includes('TP877_E')), 'Sample Exam \u2014 Glider Licence');
+  addGroup(allQuestions.filter(q => q.source && q.source.includes('PSTAR TP11919')), 'PSTAR TP11919');
+
+  if (answeredCount === 0) {
+    html += '<div class="dashboard-empty">Answer some questions first to see your stats.</div>';
+  }
+
+  const overlay = document.createElement('div');
+  overlay.className = 'dashboard-overlay';
+  overlay.onclick = e => { if (e.target === overlay) overlay.remove(); };
+  overlay.innerHTML = '<div class="dashboard-content" onclick="event.stopPropagation()">' +
+    '<button class="close-btn" onclick="this.closest(\'.dashboard-overlay\').remove()">Close</button>' +
+    '<h2>Performance Dashboard</h2>' +
+    html +
+  '</div>';
+  document.body.appendChild(overlay);
+}
+
+function exportResults() {
+  const clean = allQuestions.map(q => ({
+    id: q.id,
+    po: q.po,
+    topic: q.topic,
+    source: q.source,
+    question: q.question,
+    options: q.options,
+    correct: q.correct || null,
+    image: q.image || null,
+  }));
+  const blob = new Blob([JSON.stringify({ questions: clean }, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'ngsp-questions.json';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+// Keyboard shortcuts
+document.addEventListener('keydown', e => {
+  if (document.querySelector('.answer-key-overlay') || document.querySelector('.dashboard-overlay')) {
+    if (e.key === 'Escape') {
+      const ak = document.querySelector('.answer-key-overlay');
+      if (ak) ak.remove();
+      const db = document.querySelector('.dashboard-overlay');
+      if (db) db.remove();
+    }
+    return;
+  }
+  if (state.filtered.length === 0) return;
+  const q = state.filtered[state.currentIndex];
+  const keyMap = { '1': 'a', '2': 'b', '3': 'c', '4': 'd' };
+  if (keyMap[e.key] && !state.results[q.uid]) {
+    e.preventDefault();
+    state.selectedAnswer = keyMap[e.key];
+    render();
+  }
+  if (e.key === 'f' || e.key === 'F') {
+    if (!state.results[q.uid]) {
+      e.preventDefault();
+      toggleFlag();
+    }
+  }
+  if (e.key === 'Enter') {
+    if (state.selectedAnswer && !state.results[q.uid]) {
+      e.preventDefault();
+      if (q.correct) submitAnswer();
+    } else if (state.results[q.uid] && state.currentIndex < state.filtered.length - 1) {
+      e.preventDefault();
+      state.currentIndex++;
+      state.selectedAnswer = null;
+      render();
+    }
+  }
+  if (e.key === 'ArrowRight') { e.preventDefault(); state.selectedAnswer = null; nextQuestion(); }
+  if (e.key === 'ArrowLeft') { e.preventDefault(); state.selectedAnswer = null; prevQuestion(); }
+});
+
+// ===== EVENT LISTENERS =====
+document.getElementById('modeToggle').addEventListener('change', e => {
+  state.mode = e.target.value;
+  saveState();
+  applyFilter();
+});
+
+document.getElementById('shuffleBtn').addEventListener('click', () => {
+  for (let i = state.filtered.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [state.filtered[i], state.filtered[j]] = [state.filtered[j], state.filtered[i]];
+  }
+  state.currentIndex = 0;
+  state.selectedAnswer = null;
+  render();
+});
+
+document.getElementById('answerKeyBtn').addEventListener('click', showAnswerKey);
+document.getElementById('dashboardBtn').addEventListener('click', showDashboard);
+document.getElementById('exportBtn').addEventListener('click', exportResults);
+
+document.getElementById('resetBtn').addEventListener('click', () => {
+  if (confirm('Reset all progress? This will clear your answer history.')) {
+    state.results = {};
+    state.answeredThisSession = {};
+    state.reviewQueue = [];
+    state.flagged = {};
+    localStorage.removeItem('ngsp_state');
+    applyFilter();
+  }
+});
+
+// ===== START =====
+try {
+  const saved = localStorage.getItem('ngsp_state');
+  if (saved) state.lang = (JSON.parse(saved).lang || 'en');
+} catch (e) {}
+loadData();
+</script>
+</body>
+</html>
