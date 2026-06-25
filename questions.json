@@ -75,7 +75,7 @@
       "question": "Day or Daylight is defined as:",
       "options": {
         "a": "The time between the end of morning civil twilight and end of evening civil twilight",
-        "b": "When the center of the sun’s disk is 6 degrees below the horizon",
+        "b": "When the center of the sun\u2019s disk is 6 degrees below the horizon",
         "c": "Time between the beginning of morning civil twilight and the end of the evening civil twilight",
         "d": "Time between the beginning of morning civil twilight and the beginning of evening civil twilight"
       },
@@ -156,7 +156,7 @@
     },
     {
       "id": 12,
-      "question": "Which of the following is not a limitation of a Pilot’s license:",
+      "question": "Which of the following is not a limitation of a Pilot\u2019s license:",
       "options": {
         "a": "Illness",
         "b": "Involved in an aircraft accident because of illness",
@@ -184,7 +184,7 @@
     },
     {
       "id": 14,
-      "question": "CAR 605.88 states; “No person shall conduct a take-off in an aircraft subjected to a ___________________unless it has been inspected for damage”.",
+      "question": "CAR 605.88 states; \u201cNo person shall conduct a take-off in an aircraft subjected to a ___________________unless it has been inspected for damage\u201d.",
       "options": {
         "a": "Maintenance Overhaul",
         "b": "Re-assembly",
@@ -198,10 +198,10 @@
     },
     {
       "id": 15,
-      "question": "How long must you keep entries in an aircraft’s journey log?",
+      "question": "How long must you keep entries in an aircraft\u2019s journey log?",
       "options": {
         "a": "1 year",
-        "b": "The aircraft’s life",
+        "b": "The aircraft\u2019s life",
         "c": "5 years",
         "d": "60 months"
       },
@@ -240,7 +240,7 @@
     },
     {
       "id": 18,
-      "question": "Fill in the blank spaces: “No person shall conduct a _____ in an aircraft unless the _____is on board the aircraft, unless it is not planned that the aircraft will land and _____ at any location other than the point of departure”.",
+      "question": "Fill in the blank spaces: \u201cNo person shall conduct a _____ in an aircraft unless the _____is on board the aircraft, unless it is not planned that the aircraft will land and _____ at any location other than the point of departure\u201d.",
       "options": {
         "a": "Take-off, Radio License, Take-off again",
         "b": "Take-off, Intercept Orders, Shut Down",
@@ -284,7 +284,7 @@
       "id": 21,
       "question": "A dry windsock will indicate wind as follow:",
       "options": {
-        "a": "Each stripe of the windsock represents a wind speed increment of 3 knots. The total wind speed is determined by how many stripes are fully extended horizontally or “blown up”.",
+        "a": "Each stripe of the windsock represents a wind speed increment of 3 knots. The total wind speed is determined by how many stripes are fully extended horizontally or \u201cblown up\u201d.",
         "b": "When the windsock is 5 degrees below the horizon, winds are 10kt",
         "c": "When the windsock is 30 degrees below the horizon, winds are 6kt",
         "d": "Both B, C including 15kts or greater when the windsock is fully horizontal."
@@ -398,9 +398,9 @@
       "id": 29,
       "question": "Select the most correct statement regarding Mandatory Frequency procedures at a given airport.",
       "options": {
-        "a": "PIC can’t operate within MF area unless they are equipped with radio communication equipment",
+        "a": "PIC can\u2019t operate within MF area unless they are equipped with radio communication equipment",
         "b": "PIC that does not have a radio equipment, can operate within an MF area if a ground station is in operation at the aerodrome",
-        "c": "PIC that does not have radio equipment, can operate an aircraft to and from an uncontrolled aerodrome within an MF area if a ground station is in operation at the aerodrome, prior notice of the PIC’s intention has been given to the ground station",
+        "c": "PIC that does not have radio equipment, can operate an aircraft to and from an uncontrolled aerodrome within an MF area if a ground station is in operation at the aerodrome, prior notice of the PIC\u2019s intention has been given to the ground station",
         "d": "A and C"
       },
       "correct": "d",
@@ -498,7 +498,7 @@
       "options": {
         "a": "Airspace over Canada and adjacent international waters that is used exclusively for civilian aviation.",
         "b": "All airspace within Canadian borders, including controlled and uncontrolled airspace, and areas over international waters delegated to Canada for air traffic control.",
-        "c": "Airspace above Canada’s major cities and populated regions where flight operations are closely monitored.",
+        "c": "Airspace above Canada\u2019s major cities and populated regions where flight operations are closely monitored.",
         "d": "Restricted airspace above Canada designated for military and government use only."
       },
       "correct": "b",
@@ -536,7 +536,7 @@
     },
     {
       "id": 39,
-      "question": "& 401.07.05 In general, what are the dimensions of a “Control Zone”?",
+      "question": "& 401.07.05 In general, what are the dimensions of a \u201cControl Zone\u201d?",
       "options": {
         "a": "3000 ft ASL with a normal radius of 5 to 7 SM",
         "b": "3000 ft AGL with a normal radius of 5 to 7 SM",
@@ -634,7 +634,7 @@
     },
     {
       "id": 46,
-      "question": "When conducting a VFR flight, in Southern Domestic Airspace on a track of 155° Magnetic, which cruising altitude would be appropriate for the trip?",
+      "question": "When conducting a VFR flight, in Southern Domestic Airspace on a track of 155\u00b0 Magnetic, which cruising altitude would be appropriate for the trip?",
       "options": {
         "a": "3000 ft ASL",
         "b": "3500 ft ASL",
@@ -959,7 +959,7 @@
       "question": "Smoking is generally frowned upon for pilots due to:",
       "options": {
         "a": "An imbalance of O2 and CO2 in the bloodstream.",
-        "b": "Short term physiological effects due to the absorption of nicotine into the bloodstream and long-term effects that could impact the pilot’s ability to obtain a medical",
+        "b": "Short term physiological effects due to the absorption of nicotine into the bloodstream and long-term effects that could impact the pilot\u2019s ability to obtain a medical",
         "c": "The greater risk for the pilot to experience bad breath.",
         "d": "A and B"
       },
@@ -1558,7 +1558,7 @@
     },
     {
       "id": 112,
-      "question": "Buys Ballot’s law states that:",
+      "question": "Buys Ballot\u2019s law states that:",
       "options": {
         "a": "If you stand with your back to the wind, the low-pressure area will be to your left.",
         "b": "The volume of a given mass is inversely proportional to its pressure.",
@@ -1588,10 +1588,10 @@
       "id": 114,
       "question": "The saturated adiabatic lapse rate is:",
       "options": {
-        "a": "3°C / 1000 ft",
-        "b": "1.5°C / 1000 ft",
-        "c": "2°C / 1000 ft",
-        "d": "1.98°C / 1000 ft"
+        "a": "3\u00b0C / 1000 ft",
+        "b": "1.5\u00b0C / 1000 ft",
+        "c": "2\u00b0C / 1000 ft",
+        "d": "1.98\u00b0C / 1000 ft"
       },
       "correct": "b",
       "po": "0",
@@ -1605,7 +1605,7 @@
         "a": "When air subsides, is compressed and heated.",
         "b": "When air is carried by winds from a cold area to a warmer area, causing it to be heated by conduction.",
         "c": "When air is heated by conduction, causing it to rise.",
-        "d": "When solar radiation heats the Earth’s surface."
+        "d": "When solar radiation heats the Earth\u2019s surface."
       },
       "correct": "b",
       "po": "0",
@@ -1712,7 +1712,7 @@
     },
     {
       "id": 123,
-      "question": "Which of the following is not one of the four cloud “families”?",
+      "question": "Which of the following is not one of the four cloud \u201cfamilies\u201d?",
       "options": {
         "a": "High Clouds",
         "b": "Stratus Clouds",
@@ -1854,7 +1854,7 @@
       "id": 133,
       "question": "Which if the following statements is false?",
       "options": {
-        "a": "Surface friction is caused by friction between the earth’s surface and the atmosphere which slows the movement of air",
+        "a": "Surface friction is caused by friction between the earth\u2019s surface and the atmosphere which slows the movement of air",
         "b": "Air tends to move across the isobars at slight angles inwards towards the center of a low-pressure system",
         "c": "Air tends to move across the isobars at slight angles inwards from the center of a high-pressure system",
         "d": "Surface friction usually only affects the lower few thousand feet of the atmosphere."
@@ -2249,7 +2249,7 @@
         "a": "TAF",
         "b": "GFA",
         "c": "METAR",
-        "d": "FD’s"
+        "d": "FD\u2019s"
       },
       "correct": "c",
       "po": "0",
@@ -2261,9 +2261,9 @@
       "question": "Using the following METAR, which of the following statements are true? METAR CYYC 120300Z 31018G24KT 8SM BKN095 00/M13 A2965 RMK AC5 VIRGA ALQDS SLP070=",
       "options": {
         "a": "This METAR was issued in the month of December",
-        "b": "The winds are gusting 24 knots, and the clouds are at 9500’ASL",
+        "b": "The winds are gusting 24 knots, and the clouds are at 9500\u2019ASL",
         "c": "There is 10 statue miles of visibility",
-        "d": "There is a gust factor of 6 knots, and the bases of the altocumulus clouds are at 9500’AGL"
+        "d": "There is a gust factor of 6 knots, and the bases of the altocumulus clouds are at 9500\u2019AGL"
       },
       "correct": "d",
       "po": "0",
@@ -2272,7 +2272,7 @@
     },
     {
       "id": 163,
-      "question": "Based on the following METAR, why was the SPECI issued? SPECI CYYZ 170326Z 24013KT 6SM −SN BKN033 OVC072 M02/M04 A2978 RMK SC5AC3 SLP094= METAR CYYZ 170300Z 25007KT 10SM FEW009 BKN054 M03/M05 A2977 RMK SC2SC5 SLP093=",
+      "question": "Based on the following METAR, why was the SPECI issued? SPECI CYYZ 170326Z 24013KT 6SM \u2212SN BKN033 OVC072 M02/M04 A2978 RMK SC5AC3 SLP094= METAR CYYZ 170300Z 25007KT 10SM FEW009 BKN054 M03/M05 A2977 RMK SC2SC5 SLP093=",
       "options": {
         "a": "The wind and visibility increased, it stopped snowing, and the ceiling dropped",
         "b": "The wind increased, the visibility decreased, and the ceiling lifted",
@@ -2300,7 +2300,7 @@
     },
     {
       "id": 165,
-      "question": "What does “WS RWY 24R” mean on a METAR?",
+      "question": "What does \u201cWS RWY 24R\u201d mean on a METAR?",
       "options": {
         "a": "There is a windstorm on runway 24 Right",
         "b": "There is windshear on runway 24 Right",
@@ -2328,12 +2328,12 @@
     },
     {
       "id": 167,
-      "question": "Using the following TAF, what weather is forecasted between 0300Z and 0800Z? TAF CYHZ 170240Z 1703/1724 28006KT P6SM −SN OVC020 TEMPO 1703/1708 P6SM NSW BKN025 FM170800 VRB03KT P6SM SCT008 OVC020 BECMG 1715/1717 31010KT BKN025 FM172200 30004KT P6SM SCT025 RMK NXT FCST BY 170600Z=",
+      "question": "Using the following TAF, what weather is forecasted between 0300Z and 0800Z? TAF CYHZ 170240Z 1703/1724 28006KT P6SM \u2212SN OVC020 TEMPO 1703/1708 P6SM NSW BKN025 FM170800 VRB03KT P6SM SCT008 OVC020 BECMG 1715/1717 31010KT BKN025 FM172200 30004KT P6SM SCT025 RMK NXT FCST BY 170600Z=",
       "options": {
         "a": "There will be light snow",
-        "b": "The ceiling is forecasted to be at 2500’AGL",
-        "c": "The winds will change from a direction of 280°T to 010°T",
-        "d": "There is a forecasted scattered cloud layer at 800’AGL"
+        "b": "The ceiling is forecasted to be at 2500\u2019AGL",
+        "c": "The winds will change from a direction of 280\u00b0T to 010\u00b0T",
+        "d": "There is a forecasted scattered cloud layer at 800\u2019AGL"
       },
       "correct": "b",
       "po": "0",
@@ -2370,7 +2370,7 @@
     },
     {
       "id": 170,
-      "question": "What does “PROB30 1004/1007 2SM BR” mean when written in a TAF?",
+      "question": "What does \u201cPROB30 1004/1007 2SM BR\u201d mean when written in a TAF?",
       "options": {
         "a": "There is a 30% chance that for three hours there will be a prevailing visibility of 2 statue miles and haze",
         "b": "There is a probability that between 1004Z and 1007Z there will be a prevailing visibility of 2 statue miles due to mist",
@@ -2485,7 +2485,7 @@
       "id": 178,
       "question": "Which of the following is true?",
       "options": {
-        "a": "The Compass uses the earth’s magnetic field to point to the North Pole, a stationary point in the Arctic Ocean.",
+        "a": "The Compass uses the earth\u2019s magnetic field to point to the North Pole, a stationary point in the Arctic Ocean.",
         "b": "The compass uses geosynchronous satellites to indicate True North",
         "c": "The magnetic North Pole is moving about 55km a year.",
         "d": "a and c"
@@ -2750,7 +2750,7 @@
     },
     {
       "id": 197,
-      "question": "What is the MEF of Trenton Airport’s quadrant in the above figure",
+      "question": "What is the MEF of Trenton Airport\u2019s quadrant in the above figure",
       "options": {
         "a": "1100ft",
         "b": "1400ft",
@@ -2837,10 +2837,10 @@
       "id": 203,
       "question": "Select the wrong answer.",
       "options": {
-        "a": "STAND BY – Wait and continue monitoring frequency, caller will get back to you",
-        "b": "WILCO – I cannot comply at this moment, I will check back in a few minutes",
-        "c": "AFFIRMATIVE – Yes",
-        "d": "OVER – End of transmission, require response"
+        "a": "STAND BY \u2013 Wait and continue monitoring frequency, caller will get back to you",
+        "b": "WILCO \u2013 I cannot comply at this moment, I will check back in a few minutes",
+        "c": "AFFIRMATIVE \u2013 Yes",
+        "d": "OVER \u2013 End of transmission, require response"
       },
       "correct": "b",
       "po": "0",
@@ -2936,11 +2936,11 @@
       "question": "What is civil twilight?",
       "options": {
         "a": "6 minutes before the sun sets",
-        "b": "When the centre of the sun’s disk is less than 6° below the horizon",
-        "c": "When the centre of the sun’s disk is less than 20° below the horizon",
-        "d": "When the centre of the sun’s disk is more than 50° above the horizon"
+        "b": "When the centre of the sun\u2019s disk is less than 6\u00b0 below the horizon",
+        "c": "When the centre of the sun\u2019s disk is less than 20\u00b0 below the horizon",
+        "d": "When the centre of the sun\u2019s disk is more than 50\u00b0 above the horizon"
       },
-      "correct": "d",
+      "correct": "B",
       "po": "401",
       "topic": "Comprehensive - Air Law",
       "source": "401 EN - Air Law - Quiz.pdf"
@@ -3078,7 +3078,7 @@
         "c": "Strike out with a single line and include your name, date, time and airport where the correction was made",
         "d": "Scribble out completely, and include your name, signature, date and reason for the correction"
       },
-      "correct": "c",
+      "correct": "B",
       "po": "401",
       "topic": "Comprehensive - Air Law",
       "source": "401 EN - Air Law - Quiz.pdf"
@@ -3102,9 +3102,9 @@
       "question": "What is not true regarding standard windsocks",
       "options": {
         "a": "Horizontal when wind exceeds 15kts",
-        "b": "30° below the horizon when wind is 6kts",
+        "b": "30\u00b0 below the horizon when wind is 6kts",
         "c": "Horizontal when wind exceeds 25kts",
-        "d": "5° below the horizon when wind is 10kts"
+        "d": "5\u00b0 below the horizon when wind is 10kts"
       },
       "correct": "c",
       "po": "401",
@@ -3118,7 +3118,7 @@
         "a": "1 NM",
         "b": "2 NM",
         "c": "5 NM",
-        "d": "½ NM"
+        "d": "\u00bd NM"
       },
       "correct": "b",
       "po": "401",
@@ -3155,7 +3155,7 @@
     },
     {
       "id": 226,
-      "question": "Which of the following is not applicable to CAR 602.96 – Operating in the vicinity of an aerodrome?",
+      "question": "Which of the following is not applicable to CAR 602.96 \u2013 Operating in the vicinity of an aerodrome?",
       "options": {
         "a": "PIC shall observe traffic for the purpose of avoiding collision",
         "b": "Conform to the traffic pattern formed by other aircraft in operation",
@@ -3176,7 +3176,7 @@
         "c": "Not worry about radio communications since the MF is an uncontrolled area",
         "d": "Opt to turn the radio off after 5 minutes of listening if it is distracting"
       },
-      "correct": "c",
+      "correct": "B",
       "po": "401",
       "topic": "Comprehensive - Air Law",
       "source": "401 EN - Air Law - Quiz.pdf"
@@ -3187,8 +3187,8 @@
       "options": {
         "a": "Report at least 10 minutes before entering",
         "b": "Report when on downwind and final",
-        "c": "Not worry about radio communications if you don’t see other aircraft",
-        "d": "Continue flying above 2000’ until on final approach, and radio “Landing”"
+        "c": "Not worry about radio communications if you don\u2019t see other aircraft",
+        "d": "Continue flying above 2000\u2019 until on final approach, and radio \u201cLanding\u201d"
       },
       "correct": "b",
       "po": "401",
@@ -3255,7 +3255,7 @@
       "id": 233,
       "question": "When could special VFR be requested?",
       "options": {
-        "a": "In controlled airspace, at night, when there is less than ½ mile visibility",
+        "a": "In controlled airspace, at night, when there is less than \u00bd mile visibility",
         "b": "In uncontrolled airspace, when there is less than 1 mile visibility",
         "c": "In uncontrolled airspace, at night when there is less than 2 miles visibility",
         "d": "In controlled airspace, during the day, when there is less than 3 miles visibility"
@@ -3283,10 +3283,10 @@
       "id": 235,
       "question": "To fly in Class G airspace, VFR aircraft must:",
       "options": {
-        "a": "If at an altitude of more than 1000’ AGL, 1SM visibility, 2000’ horizontally and 500’ vertically from clouds",
-        "b": "If at an altitude of more than 500’ AGL, be free of clouds, and have 1/2 SM visibility",
-        "c": "If at an altitude of more than 2500’ AGL, 2SM visibility 2000’ horizontally and 1000’ vertically from clouds",
-        "d": "If at an altitude at more than 1000’ AGL, 1SM visibility and be clear of clouds at all times"
+        "a": "If at an altitude of more than 1000\u2019 AGL, 1SM visibility, 2000\u2019 horizontally and 500\u2019 vertically from clouds",
+        "b": "If at an altitude of more than 500\u2019 AGL, be free of clouds, and have 1/2 SM visibility",
+        "c": "If at an altitude of more than 2500\u2019 AGL, 2SM visibility 2000\u2019 horizontally and 1000\u2019 vertically from clouds",
+        "d": "If at an altitude at more than 1000\u2019 AGL, 1SM visibility and be clear of clouds at all times"
       },
       "correct": "a",
       "po": "401",
@@ -3298,7 +3298,7 @@
       "question": "To enter Class F restricted airspace:",
       "options": {
         "a": "Aircraft may access freely during the day, but never after civil twilight",
-        "b": "IFR traffic only is permitted, must be above 5000’ AGL",
+        "b": "IFR traffic only is permitted, must be above 5000\u2019 AGL",
         "c": "Access is only permitted with approval of controlling agency",
         "d": "Aircraft must listen to ATIS prior to entering the zone"
       },
@@ -3325,7 +3325,7 @@
       "id": 238,
       "question": "Which of the following statements is not true with regards to Control Zones:",
       "options": {
-        "a": "Based at 2200’ AGL unless otherwise specified and extend up to, but not including 18000’ ASL.",
+        "a": "Based at 2200\u2019 AGL unless otherwise specified and extend up to, but not including 18000\u2019 ASL.",
         "b": "Defined airspace around an airport extending from the surface to a specified height.",
         "c": "The area starts at the surface and usually extends to 3000 feet AGL with a normal radius of 5 or 7 nautical miles.",
         "d": "Designated around certain aerodromes to keep IFR aircraft within controlled airspace during approaches and to facilitate the control of VFR, and IFR traffic."
@@ -3339,10 +3339,10 @@
       "id": 239,
       "question": "The altimeter setting in the Standard Pressure Region is:",
       "options": {
-        "a": "29.92” Hg",
-        "b": "30.00” Hg",
-        "c": "29.29” Hg",
-        "d": "29.00” Hg"
+        "a": "29.92\u201d Hg",
+        "b": "30.00\u201d Hg",
+        "c": "29.29\u201d Hg",
+        "d": "29.00\u201d Hg"
       },
       "correct": "a",
       "po": "401",
@@ -3409,10 +3409,10 @@
       "id": 244,
       "question": "In the Southern Domestic Airspace, cruising altitude below 18,000 feet is determined as:",
       "options": {
-        "a": "VFR: 000° - 179° even thousands (ex 3,000 feet)",
-        "b": "VFR: 000° - 179° odd thousands plus 500 feet (ex 3,500 feet)",
-        "c": "VFR: 180° - 359° odd thousands plus 500 feet (ex 3,500 feet)",
-        "d": "VFR: 180° - 359° even thousands (ex 3,000 feet)"
+        "a": "VFR: 000\u00b0 - 179\u00b0 even thousands (ex 3,000 feet)",
+        "b": "VFR: 000\u00b0 - 179\u00b0 odd thousands plus 500 feet (ex 3,500 feet)",
+        "c": "VFR: 180\u00b0 - 359\u00b0 odd thousands plus 500 feet (ex 3,500 feet)",
+        "d": "VFR: 180\u00b0 - 359\u00b0 even thousands (ex 3,000 feet)"
       },
       "correct": "b",
       "po": "401",
@@ -3442,7 +3442,7 @@
         "c": "Certified crew required for a maintenance test flight",
         "d": "Pilot with 10,000 hours of flying experience"
       },
-      "correct": "a",
+      "correct": "C",
       "po": "401",
       "topic": "Comprehensive - Air Law",
       "source": "401 EN - Air Law - Quiz.pdf"
@@ -3456,7 +3456,7 @@
         "c": "Removal and replacement of tires, wheels or skid shoes not requiring removal of any hydraulic lines",
         "d": "Removal and replacement of control surfaces"
       },
-      "correct": "b",
+      "correct": "D",
       "po": "401",
       "topic": "Comprehensive - Air Law",
       "source": "401 EN - Air Law - Quiz.pdf"
@@ -3470,7 +3470,7 @@
         "c": "A fuel shortage necessitating a diversion or emergency landing",
         "d": "A risk of collision or loss of appropriate separation"
       },
-      "correct": "c",
+      "correct": "B",
       "po": "401",
       "topic": "Comprehensive - Air Law",
       "source": "401 EN - Air Law - Quiz.pdf"
@@ -3484,7 +3484,7 @@
         "c": "Shall be filed with a responsible person rather than ATC",
         "d": "Search and Rescue will begin 24hrs after the estimated time of arrival"
       },
-      "correct": "d",
+      "correct": "A",
       "po": "401",
       "topic": "Comprehensive - Air Law",
       "source": "401 EN - Air Law - Quiz.pdf"
@@ -3512,7 +3512,7 @@
         "c": "How far north or south a point is from the prime meridian",
         "d": "How far east or west a point is from the equator"
       },
-      "correct": "a",
+      "correct": "B",
       "po": "402",
       "topic": "Comprehensive - Navigation",
       "source": "402 EN - Navigation - Quiz.pdf"
@@ -3540,7 +3540,7 @@
         "c": "Is the shortest distance between two points on a map",
         "d": "Appears as an s-curved line on most map projections"
       },
-      "correct": "c",
+      "correct": "A",
       "po": "402",
       "topic": "Comprehensive - Navigation",
       "source": "402 EN - Navigation - Quiz.pdf"
@@ -3549,8 +3549,8 @@
       "id": 254,
       "question": "A calibrated heading refers to:",
       "options": {
-        "a": "The direction the aircraft’s nose is pointing relative to true North",
-        "b": "The direction the aircraft’s nose is pointing relative to magnetic North",
+        "a": "The direction the aircraft\u2019s nose is pointing relative to true North",
+        "b": "The direction the aircraft\u2019s nose is pointing relative to magnetic North",
         "c": "Magnetic heading that has been corrected for deviation",
         "d": "True heading that has been corrected for deviation"
       },
@@ -3568,7 +3568,7 @@
         "c": "If an aircraft is one degree off, after 1 nautical mile, they will be 60 degrees off their desired course",
         "d": "If an aircraft is 1 nautical mile off course, after 60 minutes they will be 60 nautical miles off their desired course"
       },
-      "correct": "d",
+      "correct": "A",
       "po": "402",
       "topic": "Comprehensive - Navigation",
       "source": "402 EN - Navigation - Quiz.pdf"
@@ -3708,7 +3708,7 @@
         "c": "Must be exactly on the track that is being followed on the map",
         "d": "A feature on a map that is seen only from initial take off"
       },
-      "correct": "c",
+      "correct": "B",
       "po": "402",
       "topic": "Comprehensive - Navigation",
       "source": "402 EN - Navigation - Quiz.pdf"
@@ -3760,9 +3760,9 @@
       "question": "Which of the following is NOT an ICAO standard assumption",
       "options": {
         "a": "Sea level in North America",
-        "b": "Mean Sea Level pressure (MSLP) of 29.92’ Hg",
+        "b": "Mean Sea Level pressure (MSLP) of 29.92\u2019 Hg",
         "c": "Air is a perfectly dry gas",
-        "d": "Mean Sea Level (MSL) temperature of 0°C"
+        "d": "Mean Sea Level (MSL) temperature of 0\u00b0C"
       },
       "correct": "d",
       "po": "403",
@@ -3785,14 +3785,14 @@
     },
     {
       "id": 271,
-      "question": "According to Buys Ballot’s Law:",
+      "question": "According to Buys Ballot\u2019s Law:",
       "options": {
         "a": "If you stand with your back to the wind, the low pressure will be on your right",
         "b": "If you stand with your back to the wind the low pressure will be on your left",
         "c": "If you stand with your back to the wind the low pressure will be behind",
         "d": "If you stand with your back to the wind the low pressure will be in front of you."
       },
-      "correct": "d",
+      "correct": "B",
       "po": "403",
       "topic": "Comprehensive - Meteorology",
       "source": "403 EN - Meteorology - Quiz.pdf"
@@ -3932,7 +3932,7 @@
         "c": "Is ow level fog formation in rivers and valleys",
         "d": "Requires unstable conditions to form"
       },
-      "correct": "c",
+      "correct": "A",
       "po": "403",
       "topic": "Comprehensive - Meteorology",
       "source": "403 EN - Meteorology - Quiz.pdf"
@@ -4030,7 +4030,7 @@
         "c": "High clouds, middle clouds, ground clouds, clouds of vertical development",
         "d": "High clouds, middle clouds, low clouds, clouds of vertical development"
       },
-      "correct": "c",
+      "correct": "D",
       "po": "403",
       "topic": "Comprehensive - Meteorology",
       "source": "403 EN - Meteorology - Quiz.pdf"
@@ -4111,7 +4111,7 @@
       "options": {
         "a": "Is less obstructive than haze, only minimally restricting vision",
         "b": "Gives off a bluish tint when on a dark background",
-        "c": "Can make the sun’s rays appear brighter and stronger",
+        "c": "Can make the sun\u2019s rays appear brighter and stronger",
         "d": "Can severely obstruct vision, especially when flying into the sun"
       },
       "correct": "d",
@@ -4153,7 +4153,7 @@
       "options": {
         "a": "Surface friction",
         "b": "Topography",
-        "c": "Unequal heating of the earth’s surface",
+        "c": "Unequal heating of the earth\u2019s surface",
         "d": "Moisture in the air"
       },
       "correct": "d",
@@ -4207,10 +4207,10 @@
       "id": 301,
       "question": "The two subcategories of air masses are:",
       "options": {
-        "a": "Pacific – warm, Continental – dry",
-        "b": "Maritime – moist, Continental – dry",
-        "c": "Maritime – warm, Arctic – cold",
-        "d": "Arctic – cold, Pacific – wet"
+        "a": "Pacific \u2013 warm, Continental \u2013 dry",
+        "b": "Maritime \u2013 moist, Continental \u2013 dry",
+        "c": "Maritime \u2013 warm, Arctic \u2013 cold",
+        "d": "Arctic \u2013 cold, Pacific \u2013 wet"
       },
       "correct": "b",
       "po": "403",
@@ -4223,7 +4223,7 @@
       "options": {
         "a": "Speed at which the air masses move (slower will be more modified)",
         "b": "Make up of surface i.e., land or water",
-        "c": "Temperature difference between air mass and new region’s surface temperature",
+        "c": "Temperature difference between air mass and new region\u2019s surface temperature",
         "d": "Source definition of moisture and temperate"
       },
       "correct": "d",
@@ -4311,7 +4311,7 @@
         "c": "Distinct changed in wind direction and speed, accompanied by wind flowing in a downward motion",
         "d": "A minimal downward burst of air, with a diameter of no more than 1 nautical mile, commencing at a maximum altitude of 6000ft AGL, can last up to 10 minutes"
       },
-      "correct": "b",
+      "correct": "A",
       "po": "403",
       "topic": "Comprehensive - Meteorology",
       "source": "403 EN - Meteorology - Quiz.pdf"
@@ -4339,7 +4339,7 @@
         "c": "Associated with the passing of slow-moving warm fronts",
         "d": "Are usually less than 25NM across and follow the passing of a thunderstorm"
       },
-      "correct": "d",
+      "correct": "B",
       "po": "403",
       "topic": "Comprehensive - Meteorology",
       "source": "403 EN - Meteorology - Quiz.pdf"
@@ -4353,7 +4353,7 @@
         "c": "Concentration of winds around 25-45kts",
         "d": "Funnel shaped pocket of air, associated mainly with stratiform clouds"
       },
-      "correct": "c",
+      "correct": "A",
       "po": "403",
       "topic": "Comprehensive - Meteorology",
       "source": "403 EN - Meteorology - Quiz.pdf"
@@ -4461,7 +4461,7 @@
       "question": "A Graphic Area Forecast (GFA):",
       "options": {
         "a": "Is valid only at 0000 and 1200 UTC daily",
-        "b": "Is Issued 6 times daily approximately ½ hour before the beginning of the forecasted period",
+        "b": "Is Issued 6 times daily approximately \u00bd hour before the beginning of the forecasted period",
         "c": "Issued at 2330, 0530, 1130 and 1730 UTC daily",
         "d": "Consists of 2 charts, one for winds and one for icing"
       },
@@ -4546,10 +4546,10 @@
       "id": 325,
       "question": "What is the temperature at 6000ft?",
       "options": {
-        "a": "12°C",
-        "b": "12°F",
-        "c": "-12°C",
-        "d": "-12°F"
+        "a": "12\u00b0C",
+        "b": "12\u00b0F",
+        "c": "-12\u00b0C",
+        "d": "-12\u00b0F"
       },
       "correct": "c",
       "po": "403",
@@ -4561,10 +4561,10 @@
       "id": 326,
       "question": "What are the winds at 9000ft?",
       "options": {
-        "a": "170° true at 9KTS",
-        "b": "170° magnetic at 9kts",
-        "c": "170° true at 9 mph",
-        "d": "170° magnetic 9 mph"
+        "a": "170\u00b0 true at 9KTS",
+        "b": "170\u00b0 magnetic at 9kts",
+        "c": "170\u00b0 true at 9 mph",
+        "d": "170\u00b0 magnetic 9 mph"
       },
       "correct": "a",
       "po": "403",
@@ -4632,12 +4632,12 @@
       "id": 331,
       "question": "Flaps are usually located on the training edge of the wing. Their purpose is to:",
       "options": {
-        "a": "Modify the camber of the wing to change the aircraft’s flight performance",
+        "a": "Modify the camber of the wing to change the aircraft\u2019s flight performance",
         "b": "Modify and interrupt the airflow over the wing",
         "c": "Control the rolling motion of an aircraft",
         "d": "Provide bracing for cantilevered wings"
       },
-      "correct": "d",
+      "correct": "a",
       "po": "404",
       "topic": "Comprehensive - Airframes and Systems",
       "source": "404 EN - Airframes - Quiz.pdf"
@@ -4735,7 +4735,7 @@
         "c": "A power-driven, heavier-than-air aircraft that gains lift from aerodynamic reactions on fixed surfaces",
         "d": "Any vehicle that moves in the atmosphere without power"
       },
-      "correct": "c",
+      "correct": "C",
       "po": "405",
       "topic": "Comprehensive - Theory of Flight",
       "source": "405 EN - Theory of Flight - Quiz.pdf"
@@ -4749,7 +4749,7 @@
         "c": "Camber",
         "d": "Wing Span"
       },
-      "correct": "a",
+      "correct": "A",
       "po": "405",
       "topic": "Comprehensive - Theory of Flight",
       "source": "405 EN - Theory of Flight - Quiz.pdf"
@@ -4763,7 +4763,7 @@
         "c": "Vertical axis",
         "d": "Trailing edge"
       },
-      "correct": "b",
+      "correct": "B",
       "po": "405",
       "topic": "Comprehensive - Theory of Flight",
       "source": "405 EN - Theory of Flight - Quiz.pdf"
@@ -4777,21 +4777,21 @@
         "c": "Lift increases due to a larger pressure difference between the upper and lower wing surfaces",
         "d": "Lift decreases due to less downwash"
       },
-      "correct": "c",
+      "correct": "C",
       "po": "405",
       "topic": "Comprehensive - Theory of Flight",
       "source": "405 EN - Theory of Flight - Quiz.pdf"
     },
     {
       "id": 342,
-      "question": "Which axis passes vertically through an airplane’s center of gravity?",
+      "question": "Which axis passes vertically through an airplane\u2019s center of gravity?",
       "options": {
         "a": "Longitudinal axis",
         "b": "Lateral axis",
         "c": "Vertical/Normal axis",
         "d": "Horizontal axis"
       },
-      "correct": "d",
+      "correct": "C",
       "po": "405",
       "topic": "Comprehensive - Theory of Flight",
       "source": "405 EN - Theory of Flight - Quiz.pdf"
@@ -4805,7 +4805,7 @@
         "c": "Yaw",
         "d": "Drift"
       },
-      "correct": "b",
+      "correct": "B",
       "po": "405",
       "topic": "Comprehensive - Theory of Flight",
       "source": "405 EN - Theory of Flight - Quiz.pdf"
@@ -4819,7 +4819,7 @@
         "c": "Rudder",
         "d": "Spoiler"
       },
-      "correct": "c",
+      "correct": "C",
       "po": "405",
       "topic": "Comprehensive - Theory of Flight",
       "source": "405 EN - Theory of Flight - Quiz.pdf"
@@ -4833,21 +4833,21 @@
         "c": "Third Law",
         "d": "Fourth Law"
       },
-      "correct": "a",
+      "correct": "A",
       "po": "405",
       "topic": "Comprehensive - Theory of Flight",
       "source": "405 EN - Theory of Flight - Quiz.pdf"
     },
     {
       "id": 346,
-      "question": "What is the primary force that opposes an aircraft’s forward motion through the air?",
+      "question": "What is the primary force that opposes an aircraft\u2019s forward motion through the air?",
       "options": {
         "a": "Lift",
         "b": "Drag",
         "c": "Weight",
         "d": "Thrust"
       },
-      "correct": "b",
+      "correct": "B",
       "po": "405",
       "topic": "Comprehensive - Theory of Flight",
       "source": "405 EN - Theory of Flight - Quiz.pdf"
@@ -4861,7 +4861,7 @@
         "c": "The aircraft accelerates",
         "d": "The aircraft decelerates"
       },
-      "correct": "a",
+      "correct": "A",
       "po": "405",
       "topic": "Comprehensive - Theory of Flight",
       "source": "405 EN - Theory of Flight - Quiz.pdf"
@@ -4875,21 +4875,21 @@
         "c": "The aircraft will roll left",
         "d": "The aircraft will roll right"
       },
-      "correct": "b",
+      "correct": "B",
       "po": "405",
       "topic": "Comprehensive - Theory of Flight",
       "source": "405 EN - Theory of Flight - Quiz.pdf"
     },
     {
       "id": 349,
-      "question": "Bernoulli’s Theorem states that as the speed of a fluid (such as air) increases, its pressure:",
+      "question": "Bernoulli\u2019s Theorem states that as the speed of a fluid (such as air) increases, its pressure:",
       "options": {
         "a": "Increases proportionally",
         "b": "Decreases proportionally",
         "c": "Remains constant",
         "d": "Doubles"
       },
-      "correct": "b",
+      "correct": "B",
       "po": "405",
       "topic": "Comprehensive - Theory of Flight",
       "source": "405 EN - Theory of Flight - Quiz.pdf"
@@ -4903,7 +4903,7 @@
         "c": "Both lift and drag increase",
         "d": "Lift decreases and drag increases"
       },
-      "correct": "c",
+      "correct": "C",
       "po": "405",
       "topic": "Comprehensive - Theory of Flight",
       "source": "405 EN - Theory of Flight - Quiz.pdf"
@@ -4917,7 +4917,7 @@
         "c": "It has poor aerodynamic efficiency",
         "d": "It creates maximum drag for stability"
       },
-      "correct": "b",
+      "correct": "B",
       "po": "405",
       "topic": "Comprehensive - Theory of Flight",
       "source": "405 EN - Theory of Flight - Quiz.pdf"
@@ -4931,7 +4931,7 @@
         "c": "To generate lift",
         "d": "To reduce the angle of attack"
       },
-      "correct": "c",
+      "correct": "C",
       "po": "405",
       "topic": "Comprehensive - Theory of Flight",
       "source": "405 EN - Theory of Flight - Quiz.pdf"
@@ -4945,7 +4945,7 @@
         "c": "The shape causes lower pressure above, increasing speed",
         "d": "There is no difference; air flows equally over both surfaces"
       },
-      "correct": "c",
+      "correct": "C",
       "po": "405",
       "topic": "Comprehensive - Theory of Flight",
       "source": "405 EN - Theory of Flight - Quiz.pdf"
@@ -4959,7 +4959,7 @@
         "c": "The angle between the wing and the ground",
         "d": "The speed at which the airfoil moves"
       },
-      "correct": "b",
+      "correct": "B",
       "po": "405",
       "topic": "Comprehensive - Theory of Flight",
       "source": "405 EN - Theory of Flight - Quiz.pdf"
@@ -4973,7 +4973,7 @@
         "c": "Form drag",
         "d": "Skin friction"
       },
-      "correct": "b",
+      "correct": "B",
       "po": "405",
       "topic": "Comprehensive - Theory of Flight",
       "source": "405 EN - Theory of Flight - Quiz.pdf"
@@ -4987,7 +4987,7 @@
         "c": "Decreasing surface area exposed to airflow",
         "d": "Reducing eddies and turbulent air around the aircraft"
       },
-      "correct": "d",
+      "correct": "D",
       "po": "405",
       "topic": "Comprehensive - Theory of Flight",
       "source": "405 EN - Theory of Flight - Quiz.pdf"
@@ -5001,7 +5001,7 @@
         "c": "Aircraft speed",
         "d": "Colour of the wing"
       },
-      "correct": "d",
+      "correct": "D",
       "po": "405",
       "topic": "Comprehensive - Theory of Flight",
       "source": "405 EN - Theory of Flight - Quiz.pdf"
@@ -5015,7 +5015,7 @@
         "c": "The stall speed multiplied by 1.3",
         "d": "The speed at which the aircraft climbs the fastest"
       },
-      "correct": "a",
+      "correct": "A",
       "po": "405",
       "topic": "Comprehensive - Theory of Flight",
       "source": "405 EN - Theory of Flight - Quiz.pdf"
@@ -5029,7 +5029,7 @@
         "c": "Reduces skin friction and drag",
         "d": "Is unavoidable"
       },
-      "correct": "c",
+      "correct": "C",
       "po": "405",
       "topic": "Comprehensive - Theory of Flight",
       "source": "405 EN - Theory of Flight - Quiz.pdf"
@@ -5043,21 +5043,21 @@
         "c": "The tendency of an aircraft to deviate from flight attitude",
         "d": "The tendency of an aircraft to remain in an abnormal attitude"
       },
-      "correct": "b",
+      "correct": "B",
       "po": "405",
       "topic": "Comprehensive - Theory of Flight",
       "source": "405 EN - Theory of Flight - Quiz.pdf"
     },
     {
       "id": 361,
-      "question": "Static Stability is defined as an aircraft’s ability to",
+      "question": "Static Stability is defined as an aircraft\u2019s ability to",
       "options": {
         "a": "Resist deviating from normal flight",
         "b": "Resist control actions when attempting aerobatic manoeuvres",
         "c": "Tendency to return to normal flight when disturbed",
         "d": "Tendency to deviate from normal flight when disturbed"
       },
-      "correct": "c",
+      "correct": "C",
       "po": "405",
       "topic": "Comprehensive - Theory of Flight",
       "source": "405 EN - Theory of Flight - Quiz.pdf"
@@ -5071,7 +5071,7 @@
         "c": "Ability to further deviate away from normal flight",
         "d": "Inherent ability due to design to design to return to normal flight"
       },
-      "correct": "c",
+      "correct": "C",
       "po": "405",
       "topic": "Comprehensive - Theory of Flight",
       "source": "405 EN - Theory of Flight - Quiz.pdf"
@@ -5085,7 +5085,7 @@
         "c": "The position of the centre of gravity",
         "d": "The centre of gravity being too far aft"
       },
-      "correct": "a",
+      "correct": "B",
       "po": "405",
       "topic": "Comprehensive - Theory of Flight",
       "source": "405 EN - Theory of Flight - Quiz.pdf"
@@ -5094,12 +5094,12 @@
       "id": 364,
       "question": "Which of the following does NOT affect lateral (roll) stability",
       "options": {
-        "a": "Dihedral – the angle each wing makes with the horizontal",
-        "b": "Sweepback – the leading edge sloping backwards",
-        "c": "Flaps – increasing the camber of the wing",
-        "d": "Keel Effect – Low position aircraft act as a pendulum"
+        "a": "Dihedral \u2013 the angle each wing makes with the horizontal",
+        "b": "Sweepback \u2013 the leading edge sloping backwards",
+        "c": "Flaps \u2013 increasing the camber of the wing",
+        "d": "Keel Effect \u2013 Low position aircraft act as a pendulum"
       },
-      "correct": "d",
+      "correct": "C",
       "po": "405",
       "topic": "Comprehensive - Theory of Flight",
       "source": "405 EN - Theory of Flight - Quiz.pdf"
@@ -5113,7 +5113,7 @@
         "c": "The size and shape of the ailerons",
         "d": "The size and shape of the rudder"
       },
-      "correct": "b",
+      "correct": "D",
       "po": "405",
       "topic": "Comprehensive - Theory of Flight",
       "source": "405 EN - Theory of Flight - Quiz.pdf"
@@ -5127,7 +5127,7 @@
         "c": "Starts to separate from wing",
         "d": "The smoothest layer of air on the wing"
       },
-      "correct": "c",
+      "correct": "C",
       "po": "405",
       "topic": "Comprehensive - Theory of Flight",
       "source": "405 EN - Theory of Flight - Quiz.pdf"
@@ -5141,7 +5141,7 @@
         "c": "Nose high attitude",
         "d": "Increasing airspeed"
       },
-      "correct": "a",
+      "correct": "D",
       "po": "405",
       "topic": "Comprehensive - Theory of Flight",
       "source": "405 EN - Theory of Flight - Quiz.pdf"
@@ -5150,12 +5150,12 @@
       "id": 368,
       "question": "Stall speed is affected by:",
       "options": {
-        "a": "Turns – increased load factor on wings",
-        "b": "C of G – moving backwards decreases the stall speed",
-        "c": "Flaps – decrease stall speed by increasing the camber, thus increasing lift",
+        "a": "Turns \u2013 increased load factor on wings",
+        "b": "C of G \u2013 moving backwards decreases the stall speed",
+        "c": "Flaps \u2013 decrease stall speed by increasing the camber, thus increasing lift",
         "d": "All of the above"
       },
-      "correct": "b",
+      "correct": "D",
       "po": "405",
       "topic": "Comprehensive - Theory of Flight",
       "source": "405 EN - Theory of Flight - Quiz.pdf"
@@ -5169,7 +5169,7 @@
         "c": "Increasing lift by affecting the camber",
         "d": "Decreasing lift by inhibiting the ailerons"
       },
-      "correct": "c",
+      "correct": "B",
       "po": "405",
       "topic": "Comprehensive - Theory of Flight",
       "source": "405 EN - Theory of Flight - Quiz.pdf"
@@ -5183,7 +5183,7 @@
         "c": "An uncoordinated turn with too much rudder input",
         "d": "A nose down turn with minimal rudder input"
       },
-      "correct": "d",
+      "correct": "A",
       "po": "405",
       "topic": "Comprehensive - Theory of Flight",
       "source": "405 EN - Theory of Flight - Quiz.pdf"
@@ -5197,7 +5197,7 @@
         "c": "Increase the amount of lift a wing can create",
         "d": "Decrease the amount of form drag"
       },
-      "correct": "b",
+      "correct": "B",
       "po": "405",
       "topic": "Comprehensive - Theory of Flight",
       "source": "405 EN - Theory of Flight - Quiz.pdf"
@@ -5211,7 +5211,7 @@
         "c": "Interrupt airflow under the wing",
         "d": "Decrease the amount of form drag"
       },
-      "correct": "c",
+      "correct": "C",
       "po": "405",
       "topic": "Comprehensive - Theory of Flight",
       "source": "405 EN - Theory of Flight - Quiz.pdf"
@@ -5225,7 +5225,7 @@
         "c": "Increase the camber of the wing, thus increasing lift",
         "d": "Allow the pilot to fly faster on final approach to lose more altitude"
       },
-      "correct": "a",
+      "correct": "C",
       "po": "405",
       "topic": "Comprehensive - Theory of Flight",
       "source": "405 EN - Theory of Flight - Quiz.pdf"
@@ -5239,7 +5239,7 @@
         "c": "Increased lift created by the upgoing aileron",
         "d": "Skin friction caused by the aircraft turning"
       },
-      "correct": "b",
+      "correct": "A",
       "po": "405",
       "topic": "Comprehensive - Theory of Flight",
       "source": "405 EN - Theory of Flight - Quiz.pdf"
@@ -5253,7 +5253,7 @@
         "c": "The rudder causing air to flow more slowly over the inside wing in a turn",
         "d": "The rudder causing air to flow more quickly over the outside wing in a turn"
       },
-      "correct": "c",
+      "correct": "D",
       "po": "405",
       "topic": "Comprehensive - Theory of Flight",
       "source": "405 EN - Theory of Flight - Quiz.pdf"
@@ -5267,7 +5267,7 @@
         "c": "Yawing motion about the normal axis",
         "d": "Increasing airspeed moment"
       },
-      "correct": "d",
+      "correct": "B",
       "po": "405",
       "topic": "Comprehensive - Theory of Flight",
       "source": "405 EN - Theory of Flight - Quiz.pdf"
@@ -5281,7 +5281,7 @@
         "c": "A steep, descending turn with an excessive nose down attitude",
         "d": "A shallow turn with an excessive nose down attitude"
       },
-      "correct": "b",
+      "correct": "C",
       "po": "405",
       "topic": "Comprehensive - Theory of Flight",
       "source": "405 EN - Theory of Flight - Quiz.pdf"
@@ -5295,7 +5295,7 @@
         "c": "Establish a proper downwind leg with high winds",
         "d": "Adjust position in the circuit"
       },
-      "correct": "a",
+      "correct": "A",
       "po": "405",
       "topic": "Comprehensive - Theory of Flight",
       "source": "405 EN - Theory of Flight - Quiz.pdf"
@@ -5309,7 +5309,7 @@
         "c": "The lateral axis is aligned with the flightpath",
         "d": "The lateral axis in not aligned with the flightpath"
       },
-      "correct": "b",
+      "correct": "B",
       "po": "405",
       "topic": "Comprehensive - Theory of Flight",
       "source": "405 EN - Theory of Flight - Quiz.pdf"
@@ -5323,7 +5323,7 @@
         "c": "Maintain a heading with a crosswind",
         "d": "Lose altitude in the circuit"
       },
-      "correct": "c",
+      "correct": "C",
       "po": "405",
       "topic": "Comprehensive - Theory of Flight",
       "source": "405 EN - Theory of Flight - Quiz.pdf"
@@ -5337,7 +5337,7 @@
         "c": "Most effective with spoilers closed and no flaps used",
         "d": "Used to lose altitude while turning, and more effective in a steep turn"
       },
-      "correct": "d",
+      "correct": "D",
       "po": "405",
       "topic": "Comprehensive - Theory of Flight",
       "source": "405 EN - Theory of Flight - Quiz.pdf"
@@ -5351,7 +5351,7 @@
         "c": "Full opposite rudder, push control column forward, return to normal flight attitude",
         "d": "Partial opposite rudder, neutralize controls, push control column forward, roll wings level"
       },
-      "correct": "c",
+      "correct": "B",
       "po": "405",
       "topic": "Comprehensive - Theory of Flight",
       "source": "405 EN - Theory of Flight - Quiz.pdf"
@@ -5417,11 +5417,11 @@
       "question": "The Vertical Speed Indicator (VSI):",
       "options": {
         "a": "Is accurate within 1-2 seconds",
-        "b": "Is only accurate when below 1000’ AGL",
+        "b": "Is only accurate when below 1000\u2019 AGL",
         "c": "Is accurate within 6-9 seconds",
         "d": "Indicated the rate of climb in meters per second"
       },
-      "correct": "d",
+      "correct": "C",
       "po": "406",
       "topic": "Comprehensive - Flight Instruments",
       "source": "406 EN - Instruments - Quiz.pdf"
@@ -5516,7 +5516,7 @@
       "options": {
         "a": "The aircraft is lines up on a compass rose on flat ground",
         "b": "The radio and all electronics are left off while the swing is completed to prevent interference",
-        "c": "The aircraft compass is read at 30° intervals to see how different the compass reads from the actual direction",
+        "c": "The aircraft compass is read at 30\u00b0 intervals to see how different the compass reads from the actual direction",
         "d": "A compass correction card is created and installed in the aircraft"
       },
       "correct": "b",
@@ -5598,10 +5598,10 @@
       "id": 400,
       "question": "Rapid changes in pressure to high altitudes can cause nitrogen gas in our bloodstream to bubble off faster than our body can handle, leading to decompression sickness. Which of the following is not a type and associated body location?",
       "options": {
-        "a": "The Bends – pain in large joints",
-        "b": "The Chokes – burning in the chest and pain with breathing",
-        "c": "The Creeps – itchy, swollen skin, feelings of crawling on skin",
-        "d": "The Lacks – decreased pain, increased strength in musculature"
+        "a": "The Bends \u2013 pain in large joints",
+        "b": "The Chokes \u2013 burning in the chest and pain with breathing",
+        "c": "The Creeps \u2013 itchy, swollen skin, feelings of crawling on skin",
+        "d": "The Lacks \u2013 decreased pain, increased strength in musculature"
       },
       "correct": "d",
       "po": "408",
@@ -5610,7 +5610,7 @@
     },
     {
       "id": 401,
-      "question": "Disorientation is the false sense of one’s position & motions relative to the surface of the earth. Which of the following is not a characteristic of UNRECOGNIZED disorientation?",
+      "question": "Disorientation is the false sense of one\u2019s position & motions relative to the surface of the earth. Which of the following is not a characteristic of UNRECOGNIZED disorientation?",
       "options": {
         "a": "A leading cause of aviation accidents",
         "b": "Can result in complete loss of control",
@@ -5626,10 +5626,10 @@
       "id": 402,
       "question": "A sensory illusion is where our brain interprets sensory information and tells us our body is moving in ways it is not. Which is NOT a type of Sensory Illusion?",
       "options": {
-        "a": "Olfactory illusion – the brain responds to scents and smells with reduced visual cues, causing the ground to appear closer than it is",
-        "b": "Somatogravic illusion – the brain responding to acceleration forces with reduced visual cues causing disorientation",
-        "c": "Vestibular illusion – during a prolonged coordinated turn with reduced vision, the fluid in the ear canals stabilizes, and the brain interprets level flight",
-        "d": "Coreolis illusion – rapid movements of the head in two planes with reduced visual cues causing a sense of violent, rapid tumbling"
+        "a": "Olfactory illusion \u2013 the brain responds to scents and smells with reduced visual cues, causing the ground to appear closer than it is",
+        "b": "Somatogravic illusion \u2013 the brain responding to acceleration forces with reduced visual cues causing disorientation",
+        "c": "Vestibular illusion \u2013 during a prolonged coordinated turn with reduced vision, the fluid in the ear canals stabilizes, and the brain interprets level flight",
+        "d": "Coreolis illusion \u2013 rapid movements of the head in two planes with reduced visual cues causing a sense of violent, rapid tumbling"
       },
       "correct": "a",
       "po": "408",
@@ -5743,7 +5743,7 @@
         "c": "All over-the-counter medications are safe to take",
         "d": "Never mix medications with one another, or with alcohol"
       },
-      "correct": "c",
+      "correct": "D",
       "po": "408",
       "topic": "Comprehensive - Aeromedical and HPMA",
       "source": "408 EN - Aeromedical - Quiz.pdf"
@@ -5841,7 +5841,7 @@
         "c": "Being excessively polite",
         "d": "Always solving any conflict while in the air"
       },
-      "correct": "c",
+      "correct": "A",
       "po": "408",
       "topic": "Comprehensive - Aeromedical and HPMA",
       "source": "408 EN - Aeromedical - Quiz.pdf"
@@ -5960,7 +5960,7 @@
     },
     {
       "id": 426,
-      "question": "When overtaking an aircraft at your 12 o’clock position, at your altitude, you should",
+      "question": "When overtaking an aircraft at your 12 o\u2019clock position, at your altitude, you should",
       "options": {
         "a": "climb.",
         "b": "descend.",
@@ -5979,7 +5979,7 @@
         "a": "have the right of way.",
         "b": "overtake the lower aircraft on the left.",
         "c": "give way.",
-        "d": "complete a 360° turn to the right."
+        "d": "complete a 360\u00b0 turn to the right."
       },
       "correct": "c",
       "po": "0",
@@ -6100,12 +6100,12 @@
     },
     {
       "id": 436,
-      "question": "When making initial contact with a Canadian ATC unit, the pilot of aircraft C-GFLU should transmit the manufacturer’s name or the type of aircraft, followed by registration as",
+      "question": "When making initial contact with a Canadian ATC unit, the pilot of aircraft C-GFLU should transmit the manufacturer\u2019s name or the type of aircraft, followed by registration as",
       "options": {
-        "a": "Lima – Uniform.",
-        "b": "Foxtrot – Lima – Uniform.",
-        "c": "Golf – Foxtrot – Lima – Uniform.",
-        "d": "Charlie – Golf – Foxtrot – Lima – Uniform."
+        "a": "Lima \u2013 Uniform.",
+        "b": "Foxtrot \u2013 Lima \u2013 Uniform.",
+        "c": "Golf \u2013 Foxtrot \u2013 Lima \u2013 Uniform.",
+        "d": "Charlie \u2013 Golf \u2013 Foxtrot \u2013 Lima \u2013 Uniform."
       },
       "correct": "c",
       "po": "0",
@@ -6118,8 +6118,8 @@
       "options": {
         "a": "FBSQ.",
         "b": "Fox, Baker, Sugar, Queen.",
-        "c": "Foxtrot, Bravo, Sierra, Québec.",
-        "d": "Bravo, Sierra, Québec."
+        "c": "Foxtrot, Bravo, Sierra, Qu\u00e9bec.",
+        "d": "Bravo, Sierra, Qu\u00e9bec."
       },
       "correct": "c",
       "po": "0",
@@ -6144,7 +6144,7 @@
       "id": 439,
       "question": "On initial radio contact with an ATS unit the pilot shall transmit the",
       "options": {
-        "a": "manufacturer’s name or type of aircraft and last four letters of the registration in phonetics.",
+        "a": "manufacturer\u2019s name or type of aircraft and last four letters of the registration in phonetics.",
         "b": "last three letters of the registration in phonetics.",
         "c": "whole registration in phonetics.",
         "d": "type of aircraft and the last three letters of the registration in phonetics."
@@ -6172,9 +6172,9 @@
       "id": 441,
       "question": "Where ATIS is available the information which should be included on first contact with ATC is the",
       "options": {
-        "a": "phrase “with the numbers”.",
-        "b": "phrase “ATIS received”.",
-        "c": "phrase “with the information”.",
+        "a": "phrase \u201cwith the numbers\u201d.",
+        "b": "phrase \u201cATIS received\u201d.",
+        "c": "phrase \u201cwith the information\u201d.",
         "d": "ATIS phonetic identifier."
       },
       "correct": "d",
@@ -6282,12 +6282,12 @@
     },
     {
       "id": 449,
-      "question": "Ground control authorizes “GOLF ALPHA BRAVO CHARLIE TAXI RUNWAY 29 HOLD SHORT OF RUNWAY 04”. The pilot should acknowledge this by replying “GOLF ALPHA BRAVO CHARLIE TO",
+      "question": "Ground control authorizes \u201cGOLF ALPHA BRAVO CHARLIE TAXI RUNWAY 29 HOLD SHORT OF RUNWAY 04\u201d. The pilot should acknowledge this by replying \u201cGOLF ALPHA BRAVO CHARLIE TO",
       "options": {
-        "a": "RUNWAY 04”.",
-        "b": "RUNWAY 29”.",
-        "c": "HOLD SHORT OF 29”.",
-        "d": "HOLD SHORT OF 04”."
+        "a": "RUNWAY 04\u201d.",
+        "b": "RUNWAY 29\u201d.",
+        "c": "HOLD SHORT OF 29\u201d.",
+        "d": "HOLD SHORT OF 04\u201d."
       },
       "correct": "d",
       "po": "0",
@@ -6296,7 +6296,7 @@
     },
     {
       "id": 450,
-      "question": "When a clearance for an “immediate take-off” is accepted, the pilot shall",
+      "question": "When a clearance for an \u201cimmediate take-off\u201d is accepted, the pilot shall",
       "options": {
         "a": "back-track on the runway to use the maximum available length for take-off.",
         "b": "taxi to a full stop in position on the runway and take off without further clearance.",
@@ -6310,12 +6310,12 @@
     },
     {
       "id": 451,
-      "question": "A pilot flying a heading of 270°, receives the following message from ATC, “Traffic 2 o’clock, 5 miles, eastbound”. This information indicates the traffic is",
+      "question": "A pilot flying a heading of 270\u00b0, receives the following message from ATC, \u201cTraffic 2 o\u2019clock, 5 miles, eastbound\u201d. This information indicates the traffic is",
       "options": {
-        "a": "60° to the left, altitude unknown.",
-        "b": "60° to the right, altitude unknown.",
-        "c": "90° to the right, at same altitude.",
-        "d": "90° to the left, at same altitude."
+        "a": "60\u00b0 to the left, altitude unknown.",
+        "b": "60\u00b0 to the right, altitude unknown.",
+        "c": "90\u00b0 to the right, at same altitude.",
+        "d": "90\u00b0 to the left, at same altitude."
       },
       "correct": "b",
       "po": "0",
@@ -6324,12 +6324,12 @@
     },
     {
       "id": 452,
-      "question": "A pilot receives the following ATC clearance “CLEARED TO LAND, TURN RIGHT AT THE FIRST INTERSECTION”. The pilot should",
+      "question": "A pilot receives the following ATC clearance \u201cCLEARED TO LAND, TURN RIGHT AT THE FIRST INTERSECTION\u201d. The pilot should",
       "options": {
         "a": "land and attempt to turn off even though the speed is considered too high to safely accomplish the turn.",
         "b": "complete a touch-and-go if it is not possible to safely accomplish the turn.",
         "c": "land and turn off at the nearest intersection possible commensurate with safety.",
-        "d": "land and do a 180° turn and taxi back to clear the runway at the required intersection."
+        "d": "land and do a 180\u00b0 turn and taxi back to clear the runway at the required intersection."
       },
       "correct": "c",
       "po": "0",
@@ -6396,8 +6396,8 @@
       "id": 457,
       "question": "A radio equipped aircraft has been cleared to land at a controlled airport. The pilot should acknowledge the clearance by",
       "options": {
-        "a": "replying ‘Roger’.",
-        "b": "replying ‘Wilco’.",
+        "a": "replying \u2018Roger\u2019.",
+        "b": "replying \u2018Wilco\u2019.",
         "c": "clicking the microphone button.",
         "d": "transmitting the aircraft call sign."
       },
@@ -6408,12 +6408,12 @@
     },
     {
       "id": 458,
-      "question": "An initial call to Timmins FSS should be ‘Timmins",
+      "question": "An initial call to Timmins FSS should be \u2018Timmins",
       "options": {
-        "a": "radio this is...’",
-        "b": "Flight Service Station this is...’",
-        "c": "UNICOM this is...’",
-        "d": "this is...’"
+        "a": "radio this is...\u2019",
+        "b": "Flight Service Station this is...\u2019",
+        "c": "UNICOM this is...\u2019",
+        "d": "this is...\u2019"
       },
       "correct": "a",
       "po": "0",
@@ -6450,7 +6450,7 @@
     },
     {
       "id": 461,
-      "question": "A new or replacing NOTAM without the term “EST” is valid",
+      "question": "A new or replacing NOTAM without the term \u201cEST\u201d is valid",
       "options": {
         "a": "for 48 hours only.",
         "b": "for the day it was issued.",
@@ -6464,7 +6464,7 @@
     },
     {
       "id": 462,
-      "question": "The term “EST” in the End Time in a new or replacing NOTAM means the NOTAM is valid",
+      "question": "The term \u201cEST\u201d in the End Time in a new or replacing NOTAM means the NOTAM is valid",
       "options": {
         "a": "for an estimated 24 hours.",
         "b": "for an estimated 48 hours.",
@@ -6538,7 +6538,7 @@
       "options": {
         "a": "red flags.",
         "b": "horizontal red squares with yellow diagonals.",
-        "c": "white “Xs” on runways and yellow “Xs” on taxiways.",
+        "c": "white \u201cXs\u201d on runways and yellow \u201cXs\u201d on taxiways.",
         "d": "white dumbbells."
       },
       "correct": "c",
@@ -6775,7 +6775,7 @@
       "question": "The controller offers the option for a take-off from a runway intersection. The pilot must be aware that",
       "options": {
         "a": "the remaining runway length will not be stated by the controller.",
-        "b": "it is the pilot’s responsibility to ensure that the remaining runway length is sufficient for take- off.",
+        "b": "it is the pilot\u2019s responsibility to ensure that the remaining runway length is sufficient for take- off.",
         "c": "the controller will ensure that the remaining runway length is sufficient for take-off.",
         "d": "noise abatement procedures have been cancelled."
       },
@@ -6790,7 +6790,7 @@
       "options": {
         "a": "the controller will always give the remaining runway length.",
         "b": "the controller will ensure that the remaining runway length is sufficient for take-off.",
-        "c": "it is the pilot’s responsibility to ensure that the remaining runway length is sufficient for take- off.",
+        "c": "it is the pilot\u2019s responsibility to ensure that the remaining runway length is sufficient for take- off.",
         "d": "any noise abatement procedures for the runway are automatically cancelled."
       },
       "correct": "c",
@@ -6800,7 +6800,7 @@
     },
     {
       "id": 486,
-      "question": "When an arriving aircraft is cleared “to the circuit”, the pilot should interpret this to mean join the circuit",
+      "question": "When an arriving aircraft is cleared \u201cto the circuit\u201d, the pilot should interpret this to mean join the circuit",
       "options": {
         "a": "on the downwind leg at circuit height.",
         "b": "from the upwind side of the runway in all cases.",
@@ -6828,7 +6828,7 @@
     },
     {
       "id": 488,
-      "question": "An aircraft is “cleared to the circuit” where a left hand circuit is in effect. Without further approval from ATC a right turn may be made to",
+      "question": "An aircraft is \u201ccleared to the circuit\u201d where a left hand circuit is in effect. Without further approval from ATC a right turn may be made to",
       "options": {
         "a": "join the final leg.",
         "b": "join the base leg.",
@@ -6844,8 +6844,8 @@
       "id": 489,
       "question": "When instructed to continue an approach to a runway which is clear of traffic, what action should the pilot take if no landing clearance is received?",
       "options": {
-        "a": "Circle 360° to the left.",
-        "b": "Circle 360° in the direction of the circuit.",
+        "a": "Circle 360\u00b0 to the left.",
+        "b": "Circle 360\u00b0 in the direction of the circuit.",
         "c": "Complete the landing.",
         "d": "Request landing clearance."
       },
@@ -6886,7 +6886,7 @@
       "id": 492,
       "question": "Aircraft flying VFR normally join the circuit at 1,000 feet AAE. This may not always be possible because of",
       "options": {
-        "a": "the possibility of a “straight in” clearance to the airport in which case the final leg would normally be entered at less than 1,000 feet.",
+        "a": "the possibility of a \u201cstraight in\u201d clearance to the airport in which case the final leg would normally be entered at less than 1,000 feet.",
         "b": "the existence of a NOTAM which provides for a different circuit altitude.",
         "c": "weather conditions which may necessitate a circuit height lower than 1,000 feet.",
         "d": "the existence of any of the above circumstances."
@@ -6901,7 +6901,7 @@
       "question": "A pilot on final approach is requested by ATC to reduce airspeed. The pilot should",
       "options": {
         "a": "comply, giving due consideration to safe minimum manoeuvring speed of the aircraft.",
-        "b": "acknowledge transmission and execute a 360° turn.",
+        "b": "acknowledge transmission and execute a 360\u00b0 turn.",
         "c": "overshoot and rejoin the circuit.",
         "d": "reduce airspeed well below normal approach speed range."
       },
@@ -6942,7 +6942,7 @@
       "id": 496,
       "question": "A student pilot on a VFR flight has been given a radar vector by ATC. Ahead, at a lower altitude, is a solid overcast cloud condition. The pilot should",
       "options": {
-        "a": "climb above the cloud and fly “VFR over the top”.",
+        "a": "climb above the cloud and fly \u201cVFR over the top\u201d.",
         "b": "alter heading as necessary to remain VFR and advise ATC.",
         "c": "maintain heading and altitude as it is an ATC clearance.",
         "d": "maintain heading and altitude because ATC knows of the cloud and will issue further instructions."
@@ -6954,7 +6954,7 @@
     },
     {
       "id": 497,
-      "question": "An aircraft on a Special VFR flight has been cleared for a “straight in” approach. Because of low ceiling and poor visibility, the pilot is concerned about the exact location of a radio mast in the vicinity. Avoiding this obstruction is the responsibility",
+      "question": "An aircraft on a Special VFR flight has been cleared for a \u201cstraight in\u201d approach. Because of low ceiling and poor visibility, the pilot is concerned about the exact location of a radio mast in the vicinity. Avoiding this obstruction is the responsibility",
       "options": {
         "a": "of the pilot.",
         "b": "of the tower controller as the controller is aware of the obstruction.",
@@ -6982,7 +6982,7 @@
     },
     {
       "id": 499,
-      "question": "A pilot on a VFR flight in Class C airspace is advised by ATC to maintain a specific heading. In the pilot’s opinion, this heading will cause conflict with another aircraft. The pilot should",
+      "question": "A pilot on a VFR flight in Class C airspace is advised by ATC to maintain a specific heading. In the pilot\u2019s opinion, this heading will cause conflict with another aircraft. The pilot should",
       "options": {
         "a": "always change altitude as required to avoid the other aircraft.",
         "b": "maintain the specified heading to comply with the CARs.",
@@ -7010,7 +7010,7 @@
     },
     {
       "id": 501,
-      "question": "Pilots shall activate the transponder “ident” feature",
+      "question": "Pilots shall activate the transponder \u201cident\u201d feature",
       "options": {
         "a": "before entering control zones.",
         "b": "only when so instructed by ATC.",
@@ -7024,7 +7024,7 @@
     },
     {
       "id": 502,
-      "question": "The holder of a student pilot permit may for the sole purpose of the holder’s own flight training act as PIC of an aircraft",
+      "question": "The holder of a student pilot permit may for the sole purpose of the holder\u2019s own flight training act as PIC of an aircraft",
       "options": {
         "a": "only when accompanied by a flight instructor.",
         "b": "by day and night and authorized by a supervising flight instructor.",
@@ -7330,7 +7330,7 @@
     },
     {
       "id": 524,
-      "question": "With regard to fatigue, which statement is correct according to the information given under the “Medical Information” section of the TC AIM?",
+      "question": "With regard to fatigue, which statement is correct according to the information given under the \u201cMedical Information\u201d section of the TC AIM?",
       "options": {
         "a": "Financial or family problems do not influence tolerance to fatigue.",
         "b": "Fatigue slows reaction time and causes foolish inattentive errors.",
@@ -7402,8 +7402,8 @@
       "id": 529,
       "question": "Many common drugs such as cold tablets, cough mixtures, antihistamines and other over-the- counter remedies may seriously impair the judgement and co-ordination needed while flying. The safest rule is to",
       "options": {
-        "a": "read the manufacturer’s warning to ensure that you are aware of possible reactions to such drugs.",
-        "b": "take no medicine when you plan to fly, except on the advice of a Civil Aviation Medical Examiner…",
+        "a": "read the manufacturer\u2019s warning to ensure that you are aware of possible reactions to such drugs.",
+        "b": "take no medicine when you plan to fly, except on the advice of a Civil Aviation Medical Examiner\u2026",
         "c": "allow at least 12 hours between taking any medicine or drugs and flying.",
         "d": "allow at least 8 hours between taking any medicine or drugs and flying."
       },
@@ -7512,7 +7512,7 @@
     },
     {
       "id": 537,
-      "question": "Where no search and rescue initiation time is specified in a flight itinerary, when shall the pilot report to the “responsible person”?",
+      "question": "Where no search and rescue initiation time is specified in a flight itinerary, when shall the pilot report to the \u201cresponsible person\u201d?",
       "options": {
         "a": "Within one hour after the expiration of the estimated duration of the flight specified in the flight itinerary.",
         "b": "Within one hour after landing.",
@@ -7526,7 +7526,7 @@
     },
     {
       "id": 538,
-      "question": "With regard to a flight itinerary, the “responsible person” means an individual who",
+      "question": "With regard to a flight itinerary, the \u201cresponsible person\u201d means an individual who",
       "options": {
         "a": "has agreed to report the aircraft overdue.",
         "b": "is 18 years of age or over.",
@@ -7554,7 +7554,7 @@
     },
     {
       "id": 540,
-      "question": "Estimated elapsed time A to B                       1 hour 15 minutes. Estimated stopover time at B                       30 minutes. Estimated elapsed time B to C                      1 hour 20 minutes. Using the above information, what time should be entered in the “Elapsed Time” box of a VFR flight plan?",
+      "question": "Estimated elapsed time A to B                       1 hour 15 minutes. Estimated stopover time at B                       30 minutes. Estimated elapsed time B to C                      1 hour 20 minutes. Using the above information, what time should be entered in the \u201cElapsed Time\u201d box of a VFR flight plan?",
       "options": {
         "a": "3 hours 50 minutes.",
         "b": "3 hours 20 minutes.",
@@ -7584,10 +7584,10 @@
       "id": 542,
       "question": "How is an intermediate stop indicated on the flight plan form for a VFR flight?",
       "options": {
-        "a": "By including duration of the intermediate stop in ‘Elapsed Time’ box as ATC automatically checks time between points.",
+        "a": "By including duration of the intermediate stop in \u2018Elapsed Time\u2019 box as ATC automatically checks time between points.",
         "b": "Same as any VFR flight plan if the intermediate time does not exceed 30 minutes at each point.",
-        "c": "By repeating the name of intermediate stop and its duration in the ‘Route’ column.",
-        "d": "By simply indicating “Intermediate Stop” in “Other Information” column."
+        "c": "By repeating the name of intermediate stop and its duration in the \u2018Route\u2019 column.",
+        "d": "By simply indicating \u201cIntermediate Stop\u201d in \u201cOther Information\u201d column."
       },
       "correct": "c",
       "po": "0",
@@ -7599,7 +7599,7 @@
       "question": "An ATC instruction",
       "options": {
         "a": "must be complied with when received by the pilot providing the safety of the aircraft is not jeopardized.",
-        "b": "must be ‘read back’ in full to the controller and confirmed before becoming effective.",
+        "b": "must be \u2018read back\u2019 in full to the controller and confirmed before becoming effective.",
         "c": "is in effect advice provided by ATC and does not require acceptance or formal acknowledgement by the pilot concerned.",
         "d": "is the same as an ATC clearance."
       },
@@ -7694,7 +7694,7 @@
     },
     {
       "id": 550,
-      "question": "An aircraft’s 121.5 MHz ELT may be switched to transmit for test purposes anytime",
+      "question": "An aircraft\u2019s 121.5 MHz ELT may be switched to transmit for test purposes anytime",
       "options": {
         "a": "following a hard landing.",
         "b": "during the first 5 minutes of any hour UTC.",
@@ -7708,7 +7708,7 @@
     },
     {
       "id": 551,
-      "question": "Before shutting down you can verify that the aircraft’s ELT is not transmitting by",
+      "question": "Before shutting down you can verify that the aircraft\u2019s ELT is not transmitting by",
       "options": {
         "a": "checking that the ELT switch is in the off position.",
         "b": "listening on 121.5 MHz for a signal.",
@@ -7736,7 +7736,7 @@
     },
     {
       "id": 553,
-      "question": "When an aircraft engine is left running on the ground and no person remains onboard, the aircraft’s movement must be restricted and",
+      "question": "When an aircraft engine is left running on the ground and no person remains onboard, the aircraft\u2019s movement must be restricted and",
       "options": {
         "a": "it must remain in sight of the pilot at all times.",
         "b": "it must not be left unattended.",
@@ -7866,7 +7866,7 @@
       "options": {
         "a": "shall comply regardless of the circumstances.",
         "b": "may taxi across the intersection after the departing or arriving aircraft has cleared their path.",
-        "c": "who inadvertently go through the intersection should immediately do a 180° turn and backtrack to the hold position.",
+        "c": "who inadvertently go through the intersection should immediately do a 180\u00b0 turn and backtrack to the hold position.",
         "d": "should immediately inform ATC if they are unable to comply."
       },
       "correct": "d",
@@ -7906,7 +7906,7 @@
       "id": 565,
       "question": "Normally, a helicopter in uncontrolled airspace at less than 1,000 feet AGL may operate during the day in flight visibility which is not less than",
       "options": {
-        "a": "½ mile.",
+        "a": "\u00bd mile.",
         "b": "1 mile.",
         "c": "2 miles.",
         "d": "3 miles."
@@ -7974,7 +7974,7 @@
     },
     {
       "id": 570,
-      "question": "‘Day’ in Canada is that period of time between",
+      "question": "\u2018Day\u2019 in Canada is that period of time between",
       "options": {
         "a": "sunrise and sunset.",
         "b": "one hour before sunrise and one hour after sunset.",
@@ -7988,7 +7988,7 @@
     },
     {
       "id": 571,
-      "question": "‘Night’ in Canada is that period of time between",
+      "question": "\u2018Night\u2019 in Canada is that period of time between",
       "options": {
         "a": "sunset and sunrise.",
         "b": "the beginning of evening civil twilight and the end of morning civil twilight.",
@@ -8030,7 +8030,7 @@
     },
     {
       "id": 574,
-      "question": "Which statement is correct with regard to “advisory airspace”?",
+      "question": "Which statement is correct with regard to \u201cadvisory airspace\u201d?",
       "options": {
         "a": "A transient aircraft entering active advisory airspace shall be equipped with a serviceable transponder.",
         "b": "Non-participating VFR aircraft are encouraged to avoid flight in advisory airspace during active periods specified on aeronautical charts and NOTAM.",
@@ -8100,7 +8100,7 @@
     },
     {
       "id": 579,
-      "question": "An aircraft cruising VFR in level flight above 3,000 feet AGL on a track of 290°M shall be flown at an",
+      "question": "An aircraft cruising VFR in level flight above 3,000 feet AGL on a track of 290\u00b0M shall be flown at an",
       "options": {
         "a": "even thousand foot altitude.",
         "b": "even thousand plus 500 foot altitude.",
@@ -8170,7 +8170,7 @@
     },
     {
       "id": 584,
-      "question": "‘Controlled Airspace’ means all airspace of defined dimensions within which",
+      "question": "\u2018Controlled Airspace\u2019 means all airspace of defined dimensions within which",
       "options": {
         "a": "Control Zone regulations are in force.",
         "b": "security regulations are in force.",
@@ -8201,7 +8201,7 @@
       "question": "The minimum flight visibility for VFR flight within a low level airway is",
       "options": {
         "a": "1 mile.",
-        "b": "1½ miles.",
+        "b": "1\u00bd miles.",
         "c": "2 miles.",
         "d": "3 miles."
       },
@@ -8242,7 +8242,7 @@
       "id": 589,
       "question": "ATC may authorize an aircraft equipped with a functioning two-way radio to transit a Control Zone under day SVFR provided the flight visibility and, when reported, ground visibility, are each not less than",
       "options": {
-        "a": "½ mile.",
+        "a": "\u00bd mile.",
         "b": "1 mile.",
         "c": "2 miles.",
         "d": "3 miles."
@@ -8257,9 +8257,9 @@
       "question": "ATC may authorize a helicopter equipped with a functioning two-way radio to transit a Control Zone under day SVFR where the flight visibility and, when reported, ground visibility are each not less than",
       "options": {
         "a": "1 mile and operated at not less than 500 feet AGL.",
-        "b": "½ mile.",
+        "b": "\u00bd mile.",
         "c": "1 mile.",
-        "d": "½ mile and operated at not less than 500 feet AGL."
+        "d": "\u00bd mile and operated at not less than 500 feet AGL."
       },
       "correct": "b",
       "po": "0",
@@ -8417,7 +8417,7 @@
       },
       "correct": "1",
       "po": "0",
-      "topic": "Sample Exam — Glider Licence",
+      "topic": "Sample Exam \u2014 Glider Licence",
       "source": "TP877_E.txt"
     },
     {
@@ -8431,7 +8431,7 @@
       },
       "correct": "4",
       "po": "0",
-      "topic": "Sample Exam — Glider Licence",
+      "topic": "Sample Exam \u2014 Glider Licence",
       "source": "TP877_E.txt"
     },
     {
@@ -8445,7 +8445,7 @@
       },
       "correct": "2",
       "po": "0",
-      "topic": "Sample Exam — Glider Licence",
+      "topic": "Sample Exam \u2014 Glider Licence",
       "source": "TP877_E.txt"
     },
     {
@@ -8459,7 +8459,7 @@
       },
       "correct": "4",
       "po": "0",
-      "topic": "Sample Exam — Glider Licence",
+      "topic": "Sample Exam \u2014 Glider Licence",
       "source": "TP877_E.txt"
     },
     {
@@ -8473,7 +8473,7 @@
       },
       "correct": "3",
       "po": "0",
-      "topic": "Sample Exam — Glider Licence",
+      "topic": "Sample Exam \u2014 Glider Licence",
       "source": "TP877_E.txt"
     },
     {
@@ -8487,7 +8487,7 @@
       },
       "correct": "2",
       "po": "0",
-      "topic": "Sample Exam — Glider Licence",
+      "topic": "Sample Exam \u2014 Glider Licence",
       "source": "TP877_E.txt"
     },
     {
@@ -8501,7 +8501,7 @@
       },
       "correct": "1",
       "po": "0",
-      "topic": "Sample Exam — Glider Licence",
+      "topic": "Sample Exam \u2014 Glider Licence",
       "source": "TP877_E.txt"
     },
     {
@@ -8515,7 +8515,7 @@
       },
       "correct": "2",
       "po": "0",
-      "topic": "Sample Exam — Glider Licence",
+      "topic": "Sample Exam \u2014 Glider Licence",
       "source": "TP877_E.txt"
     },
     {
@@ -8529,7 +8529,7 @@
       },
       "correct": "3",
       "po": "0",
-      "topic": "Sample Exam — Glider Licence",
+      "topic": "Sample Exam \u2014 Glider Licence",
       "source": "TP877_E.txt"
     },
     {
@@ -8543,7 +8543,7 @@
       },
       "correct": "2",
       "po": "0",
-      "topic": "Sample Exam — Glider Licence",
+      "topic": "Sample Exam \u2014 Glider Licence",
       "source": "TP877_E.txt"
     },
     {
@@ -8557,7 +8557,7 @@
       },
       "correct": "1",
       "po": "0",
-      "topic": "Sample Exam — Glider Licence",
+      "topic": "Sample Exam \u2014 Glider Licence",
       "source": "TP877_E.txt"
     },
     {
@@ -8571,7 +8571,7 @@
       },
       "correct": "3",
       "po": "0",
-      "topic": "Sample Exam — Glider Licence",
+      "topic": "Sample Exam \u2014 Glider Licence",
       "source": "TP877_E.txt"
     },
     {
@@ -8585,7 +8585,7 @@
       },
       "correct": "1",
       "po": "0",
-      "topic": "Sample Exam — Glider Licence",
+      "topic": "Sample Exam \u2014 Glider Licence",
       "source": "TP877_E.txt"
     },
     {
@@ -8599,7 +8599,7 @@
       },
       "correct": "3",
       "po": "0",
-      "topic": "Sample Exam — Glider Licence",
+      "topic": "Sample Exam \u2014 Glider Licence",
       "source": "TP877_E.txt"
     },
     {
@@ -8613,12 +8613,12 @@
       },
       "correct": "1",
       "po": "0",
-      "topic": "Sample Exam — Glider Licence",
+      "topic": "Sample Exam \u2014 Glider Licence",
       "source": "TP877_E.txt"
     },
     {
       "id": 616,
-      "question": "‘Day’ in Canada is defined as that period of time between",
+      "question": "\u2018Day\u2019 in Canada is defined as that period of time between",
       "options": {
         "a": "sunrise and sunset.",
         "b": "one hour before sunrise and one hour after sunset.",
@@ -8627,7 +8627,7 @@
       },
       "correct": "4",
       "po": "0",
-      "topic": "Sample Exam — Glider Licence",
+      "topic": "Sample Exam \u2014 Glider Licence",
       "source": "TP877_E.txt"
     },
     {
@@ -8641,7 +8641,7 @@
       },
       "correct": "4",
       "po": "0",
-      "topic": "Sample Exam — Glider Licence",
+      "topic": "Sample Exam \u2014 Glider Licence",
       "source": "TP877_E.txt"
     },
     {
@@ -8655,7 +8655,7 @@
       },
       "correct": "4",
       "po": "0",
-      "topic": "Sample Exam — Glider Licence",
+      "topic": "Sample Exam \u2014 Glider Licence",
       "source": "TP877_E.txt"
     },
     {
@@ -8669,7 +8669,7 @@
       },
       "correct": "1",
       "po": "0",
-      "topic": "Sample Exam — Glider Licence",
+      "topic": "Sample Exam \u2014 Glider Licence",
       "source": "TP877_E.txt"
     },
     {
@@ -8683,21 +8683,21 @@
       },
       "correct": "2",
       "po": "0",
-      "topic": "Sample Exam — Glider Licence",
+      "topic": "Sample Exam \u2014 Glider Licence",
       "source": "TP877_E.txt"
     },
     {
       "id": 621,
       "question": "The total lift force acting on an aerofoil in flight is considered to act",
       "options": {
-        "a": "upwards with reference to the earth’s surface.",
-        "b": "at 90º to the aircraft longitudinal axis.",
-        "c": "at 90º to the average relative air flow.",
-        "d": "at 90º to the average wing chord."
+        "a": "upwards with reference to the earth\u2019s surface.",
+        "b": "at 90\u00ba to the aircraft longitudinal axis.",
+        "c": "at 90\u00ba to the average relative air flow.",
+        "d": "at 90\u00ba to the average wing chord."
       },
       "correct": "3",
       "po": "0",
-      "topic": "Sample Exam — Glider Licence",
+      "topic": "Sample Exam \u2014 Glider Licence",
       "source": "TP877_E.txt"
     },
     {
@@ -8711,7 +8711,7 @@
       },
       "correct": "3",
       "po": "0",
-      "topic": "Sample Exam — Glider Licence",
+      "topic": "Sample Exam \u2014 Glider Licence",
       "source": "TP877_E.txt"
     },
     {
@@ -8725,7 +8725,7 @@
       },
       "correct": "2",
       "po": "0",
-      "topic": "Sample Exam — Glider Licence",
+      "topic": "Sample Exam \u2014 Glider Licence",
       "source": "TP877_E.txt"
     },
     {
@@ -8739,7 +8739,7 @@
       },
       "correct": "4",
       "po": "0",
-      "topic": "Sample Exam — Glider Licence",
+      "topic": "Sample Exam \u2014 Glider Licence",
       "source": "TP877_E.txt"
     },
     {
@@ -8753,7 +8753,7 @@
       },
       "correct": "4",
       "po": "0",
-      "topic": "Sample Exam — Glider Licence",
+      "topic": "Sample Exam \u2014 Glider Licence",
       "source": "TP877_E.txt"
     },
     {
@@ -8767,7 +8767,7 @@
       },
       "correct": "3",
       "po": "0",
-      "topic": "Sample Exam — Glider Licence",
+      "topic": "Sample Exam \u2014 Glider Licence",
       "source": "TP877_E.txt"
     },
     {
@@ -8777,11 +8777,11 @@
         "a": "yaw the glider to the right and left in a series of skidding turns.",
         "b": "commence a series of \"S\" turns at normal tow position.",
         "c": "porpoise rapidly between high and low tow positions.",
-        "d": "fly to the left of the tug and rock the glider’s wings."
+        "d": "fly to the left of the tug and rock the glider\u2019s wings."
       },
       "correct": "4",
       "po": "0",
-      "topic": "Sample Exam — Glider Licence",
+      "topic": "Sample Exam \u2014 Glider Licence",
       "source": "TP877_E.txt"
     },
     {
@@ -8795,7 +8795,7 @@
       },
       "correct": "1",
       "po": "0",
-      "topic": "Sample Exam — Glider Licence",
+      "topic": "Sample Exam \u2014 Glider Licence",
       "source": "TP877_E.txt"
     },
     {
@@ -8809,7 +8809,7 @@
       },
       "correct": "2",
       "po": "0",
-      "topic": "Sample Exam — Glider Licence",
+      "topic": "Sample Exam \u2014 Glider Licence",
       "source": "TP877_E.txt"
     },
     {
@@ -8823,7 +8823,7 @@
       },
       "correct": "3",
       "po": "0",
-      "topic": "Sample Exam — Glider Licence",
+      "topic": "Sample Exam \u2014 Glider Licence",
       "source": "TP877_E.txt",
       "image": "ExamQ30.png"
     },
@@ -8838,7 +8838,7 @@
       },
       "correct": "1",
       "po": "0",
-      "topic": "Sample Exam — Glider Licence",
+      "topic": "Sample Exam \u2014 Glider Licence",
       "source": "TP877_E.txt"
     },
     {
@@ -8852,21 +8852,21 @@
       },
       "correct": "1",
       "po": "0",
-      "topic": "Sample Exam — Glider Licence",
+      "topic": "Sample Exam \u2014 Glider Licence",
       "source": "TP877_E.txt"
     },
     {
       "id": 633,
-      "question": "The flight manual states that the maximum cross-wind landing component applicable to a particular glider is 090/10 KT. Which wind velocity will permit landing within this limit when landing on runway 27?",
+      "question": "The flight manual states that the maximum cross-wind landing component applicable to a particular glider is 090\uf0b0/10 KT. Which wind velocity will permit landing within this limit when landing on runway 27?",
       "options": {
-        "a": "240 M/24 KT.",
-        "b": "290 M/20 KT.",
-        "c": "300 M/26 KT.",
-        "d": "330 M/15 KT."
+        "a": "240\uf0b0 M/24 KT.",
+        "b": "290\uf0b0 M/20 KT.",
+        "c": "300\uf0b0 M/26 KT.",
+        "d": "330\uf0b0 M/15 KT."
       },
       "correct": "2",
       "po": "0",
-      "topic": "Sample Exam — Glider Licence",
+      "topic": "Sample Exam \u2014 Glider Licence",
       "source": "TP877_E.txt",
       "image": "ExamQ33.png"
     },
@@ -8881,7 +8881,7 @@
       },
       "correct": "1",
       "po": "0",
-      "topic": "Sample Exam — Glider Licence",
+      "topic": "Sample Exam \u2014 Glider Licence",
       "source": "TP877_E.txt"
     },
     {
@@ -8895,12 +8895,12 @@
       },
       "correct": "1",
       "po": "0",
-      "topic": "Sample Exam — Glider Licence",
+      "topic": "Sample Exam \u2014 Glider Licence",
       "source": "TP877_E.txt"
     },
     {
       "id": 636,
-      "question": "The elevation of Carp Airport (N4519', W7601') is",
+      "question": "The elevation of Carp Airport (N45\uf0b019', W76\uf0b001') is",
       "options": {
         "a": "350 feet.",
         "b": "382 feet.",
@@ -8909,7 +8909,7 @@
       },
       "correct": "2",
       "po": "0",
-      "topic": "Sample Exam — Glider Licence",
+      "topic": "Sample Exam \u2014 Glider Licence",
       "source": "TP877_E.txt"
     },
     {
@@ -8923,7 +8923,7 @@
       },
       "correct": "3",
       "po": "0",
-      "topic": "Sample Exam — Glider Licence",
+      "topic": "Sample Exam \u2014 Glider Licence",
       "source": "TP877_E.txt"
     },
     {
@@ -8937,7 +8937,7 @@
       },
       "correct": "2",
       "po": "0",
-      "topic": "Sample Exam — Glider Licence",
+      "topic": "Sample Exam \u2014 Glider Licence",
       "source": "TP877_E.txt"
     },
     {
@@ -8951,7 +8951,7 @@
       },
       "correct": "2",
       "po": "0",
-      "topic": "Sample Exam — Glider Licence",
+      "topic": "Sample Exam \u2014 Glider Licence",
       "source": "TP877_E.txt"
     },
     {
@@ -8965,7 +8965,7 @@
       },
       "correct": "3",
       "po": "0",
-      "topic": "Sample Exam — Glider Licence",
+      "topic": "Sample Exam \u2014 Glider Licence",
       "source": "TP877_E.txt"
     },
     {
@@ -8979,7 +8979,7 @@
       },
       "correct": "4",
       "po": "0",
-      "topic": "Sample Exam — Glider Licence",
+      "topic": "Sample Exam \u2014 Glider Licence",
       "source": "TP877_E.txt"
     },
     {
@@ -8993,7 +8993,7 @@
       },
       "correct": "3",
       "po": "0",
-      "topic": "Sample Exam — Glider Licence",
+      "topic": "Sample Exam \u2014 Glider Licence",
       "source": "TP877_E.txt"
     },
     {
@@ -9002,12 +9002,12 @@
       "options": {
         "a": "direct from high to low pressure areas.",
         "b": "clockwise around a high and counter-clockwise around a low.",
-        "c": "at a 30 angle out of a low pressure area.",
-        "d": "at a 30 angle into a high pressure area."
+        "c": "at a 30\uf0b0 angle out of a low pressure area.",
+        "d": "at a 30\uf0b0 angle into a high pressure area."
       },
       "correct": "2",
       "po": "0",
-      "topic": "Sample Exam — Glider Licence",
+      "topic": "Sample Exam \u2014 Glider Licence",
       "source": "TP877_E.txt"
     },
     {
@@ -9021,7 +9021,7 @@
       },
       "correct": "4",
       "po": "0",
-      "topic": "Sample Exam — Glider Licence",
+      "topic": "Sample Exam \u2014 Glider Licence",
       "source": "TP877_E.txt"
     },
     {
@@ -9035,7 +9035,7 @@
       },
       "correct": "1",
       "po": "0",
-      "topic": "Sample Exam — Glider Licence",
+      "topic": "Sample Exam \u2014 Glider Licence",
       "source": "TP877_E.txt"
     },
     {
@@ -9049,7 +9049,7 @@
       },
       "correct": "4",
       "po": "0",
-      "topic": "Sample Exam — Glider Licence",
+      "topic": "Sample Exam \u2014 Glider Licence",
       "source": "TP877_E.txt"
     },
     {
@@ -9063,7 +9063,7 @@
       },
       "correct": "3",
       "po": "0",
-      "topic": "Sample Exam — Glider Licence",
+      "topic": "Sample Exam \u2014 Glider Licence",
       "source": "TP877_E.txt"
     },
     {
@@ -9077,7 +9077,7 @@
       },
       "correct": "4",
       "po": "0",
-      "topic": "Sample Exam — Glider Licence",
+      "topic": "Sample Exam \u2014 Glider Licence",
       "source": "TP877_E.txt"
     },
     {
@@ -9091,7 +9091,7 @@
       },
       "correct": "4",
       "po": "0",
-      "topic": "Sample Exam — Glider Licence",
+      "topic": "Sample Exam \u2014 Glider Licence",
       "source": "TP877_E.txt"
     },
     {
@@ -9105,7 +9105,7 @@
       },
       "correct": "4",
       "po": "0",
-      "topic": "Sample Exam — Glider Licence",
+      "topic": "Sample Exam \u2014 Glider Licence",
       "source": "TP877_E.txt"
     }
   ]
